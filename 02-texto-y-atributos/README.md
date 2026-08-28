@@ -1,290 +1,238 @@
-# Lección 2: texto, etiquetas y atributos
+# Lección 2: texto, jerarquía y atributos
 
-Esta lección continúa el documento que preparaste en [Estructura HTML5](../01-estructura-html/README.md). Ya tienes `html`, `head` y `body`; ahora aprenderás a escribir y organizar texto dentro de `body`.
+Esta lección continúa el documento que preparaste en [Estructura HTML5](../01-estructura-html/README.md). Ya comprendes el esqueleto base (`html`, `head`, `body`); ahora aprenderás a estructurar y dar significado real a todo el texto que vivirá dentro de `<body>`.
 
 > [!TIP]
-> Trabaja sobre el mismo `index.html` de la lección anterior. Agrega cada ejemplo dentro de `body`, guarda el archivo y revisa el resultado en el navegador.
+> Trabaja sobre el archivo `index.html` de la lección anterior. Agrega cada nuevo ejemplo dentro de la etiqueta `<body>`, guarda los cambios y refresca tu navegador para ver los resultados.
 
-## 1. Encabezados: de `h1` a `h6`
+---
 
-Los encabezados organizan los temas de una página. HTML tiene seis niveles:
+## 1. Modelo mental: Elementos en Bloque vs. Elementos en Línea
 
-| Etiqueta | ¿Para qué sirve? |
-| --- | --- |
-| `h1` | Título principal de toda la página. |
-| `h2` | Título de una sección principal. |
-| `h3` | Subtema dentro de una sección `h2`. |
-| `h4` | Subtema dentro de una sección `h3`. |
-| `h5` | Subtema dentro de una sección `h4`. |
-| `h6` | Nivel más específico de encabezado. |
+Antes de escribir texto, debes conocer los dos comportamientos naturales de las etiquetas en HTML:
 
-### Ejemplo de jerarquía
+```text
+ELEMENTO EN BLOQUE (ej. <h1>, <p>, <hr>):
++-------------------------------------------------------------------+
+| Ocupa todo el ancho disponible y fuerza un salto de línea antes y |
+| después de él. Empieza siempre en un renglón nuevo.               |
++-------------------------------------------------------------------+
 
-Agrega este contenido dentro de `body`:
-
-```html
-<h1>Guía para crear una página web</h1>
-
-<h2>Planear la página</h2>
-<h3>Definir el objetivo</h3>
-<h3>Conocer al público</h3>
-
-<h2>Construir la página</h2>
-<h3>Crear el contenido</h3>
-<h4>Escribir los textos</h4>
-<h5>Revisar los títulos</h5>
-<h6>Comprobar los detalles</h6>
+ELEMENTO EN LÍNEA (ej. <strong>, <em>, <span>, <code>):
+Texto normal con un [elemento en línea] que solo ocupa el ancho de su contenido.
 ```
 
-El ejemplo se puede leer como el índice de un libro: `h1` presenta el tema general, `h2` divide los temas principales y los niveles siguientes crean subdivisiones.
+- **Elementos en Bloque (*Block*):** Crean estructuras grandes y párrafos independientes.
+- **Elementos en Línea (*Inline*):** Viven **dentro** de un bloque de texto y no rompen el flujo de la lectura.
+
+---
+
+## 2. Encabezados: de `h1` a `h6`
+
+Los encabezados organizan la jerarquía de la información, de mayor a menor importancia:
+
+| Etiqueta | Nivel | ¿Cuándo utilizarla? |
+| --- | --- | --- |
+| `h1` | Primario | **Título principal de toda la página.** Solo debe haber **uno** por documento. |
+| `h2` | Secundario | Título de una sección principal de contenido. |
+| `h3` | Terciario | Subtema dentro de un `h2`. |
+| `h4` | Nivel 4 | Subtema dentro de un `h3`. |
+| `h5` | Nivel 5 | Subtema muy específico dentro de un `h4`. |
+| `h6` | Nivel 6 | El nivel más específico y profundo disponible. |
+
+### Ejemplo de jerarquía correcta
+
+```html
+<h1>Manual de Desarrollo Web</h1>
+
+<h2>1. Fundamentos de HTML</h2>
+<h3>1.1. Estructura básica</h3>
+<h3>1.2. Encabezados y párrafos</h3>
+
+<h2>2. Estilos con CSS</h2>
+<h3>2.1. Selectores</h3>
+<h4>2.1.1. Selectores de clase</h4>
+```
+
+### Las 2 Reglas de Oro de los encabezados
+
+1. **Nunca te saltes niveles:** No pases de un `<h2>` directo a un `<h4>`. La jerarquía debe ser siempre escalonada.
+2. **No elijas la etiqueta por su tamaño visual:** Si quieres un texto más grande o más pequeño, eso lo resolverás después con CSS. Elige la etiqueta únicamente por la relación jerárquica del tema.
 
 > [!IMPORTANT]
-> No elijas `h3`, `h4`, `h5` o `h6` porque su texto se vea más pequeño. El nivel representa la relación del contenido. Más adelante CSS cambiará el tamaño visual.
+> Los lectores de pantalla para personas con discapacidad visual y los motores de búsqueda como Google usan los encabezados como un índice para navegar por tu página. Una jerarquía rota arruina la accesibilidad y el SEO.
 
-### Práctica de encabezados
+---
 
-Crea la estructura de un artículo sobre una ciudad usando:
+## 3. Párrafos (`p`), saltos de línea (`br`) y separadores (`hr`)
 
-- Un `h1` para el nombre del artículo.
-- Tres `h2` para los temas principales.
-- Al menos un `h3` dentro de cada `h2`.
-- Un `h4` dentro de uno de tus `h3`.
+### Párrafos con `p`
 
-Después lee únicamente tus encabezados. Si parecen el índice ordenado de un artículo, la jerarquía está bien encaminada.
-
-> [!NOTE]
-> En HTML, el nivel del encabezado depende de la importancia y relación del tema. Su tamaño visual se puede cambiar más adelante con CSS.
-
-## 2. Párrafos con `p`
-
-La etiqueta `p` representa un párrafo: un bloque normal de texto.
+Representan bloques normales de texto con una idea completa:
 
 ```html
-<h1>Mi portafolio</h1>
-<p>Estoy aprendiendo a crear páginas web.</p>
-<p>Mi objetivo es construir sitios claros, útiles y fáciles de navegar.</p>
+<p>HTML estructura el contenido de una página mediante etiquetas semánticas.</p>
+<p>El navegador se encarga de separar cada párrafo con un margen vertical automático.</p>
 ```
 
-El navegador coloca cada párrafo en una línea o bloque separado. No necesitas agregar etiquetas especiales para que el texto pase al siguiente renglón.
+### Saltos de línea con `br` y divisiones temáticas con `hr`
 
-### Qué observar en los párrafos
-
-- Cada `p` contiene una idea o bloque de texto.
-- Los párrafos aparecen en el orden en que los escribes.
-- El espacio que ves entre ellos es un estilo predeterminado del navegador.
-
-### Práctica de párrafos
-
-Agrega tres párrafos sobre ti:
-
-- Quién eres.
-- Qué estás aprendiendo.
-- Qué tipo de página quieres crear.
-
-## 3. Saltos de línea y separadores
-
-Usa `br` cuando un salto de línea forma parte del contenido, por ejemplo, en una dirección o una canción. No lo uses para crear espacios de diseño.
+Ambas son **etiquetas vacías** (no tienen etiqueta de cierre):
 
 ```html
+<!-- br: Salto de línea donde el corte es parte del contenido -->
 <p>
-  Reforma 25<br>
-  Centro, Ciudad de México
+  Av. Juárez 100<br>
+  Código Postal 06000<br>
+  Ciudad de México
 </p>
-```
 
-Usa `hr` para separar un cambio de tema dentro del contenido:
-
-```html
-<p>Esta es la introducción del artículo.</p>
+<!-- hr: Cambio temático de contenido (línea separadora) -->
 <hr>
-<p>Ahora comienza una sección diferente.</p>
+
+<p>Aquí comienza un tema completamente diferente al anterior.</p>
 ```
-
-### Qué observar en `br` y `hr`
-
-- `br` cambia de línea dentro del mismo contenido.
-- `hr` marca una separación entre temas.
-- Ninguna de las dos etiquetas sirve para construir el diseño completo de la página.
 
 > [!WARNING]
-> No uses muchos `br` para acomodar una página. Los espacios, columnas y posiciones se resolverán después con CSS.
+> Nunca uses `<br><br><br>` para crear espacios en blanco o empujar elementos hacia abajo. Los espacios y separaciones visuales son responsabilidad exclusiva de CSS.
 
-### Reto de separación
+---
 
-Escribe una dirección usando `br` y crea un artículo con dos temas separados por `hr`. Explica por qué cada etiqueta está justificada.
+## 4. Dar significado al texto: Semántica vs. Presentación
 
-## 4. Dar significado al texto
+HTML moderno no busca simplemente cambiar cómo se ve el texto, sino **comunicar qué significa**.
 
-Estas etiquetas no solo cambian la apariencia: indican qué significa el texto.
+| Etiqueta Semántica | Significado real | Etiqueta Visual Antigua | Diferencia clave |
+| --- | --- | --- | --- |
+| `<strong>` | **Importancia o urgencia grave.** | `<b>` (Bold) | `strong` altera el tono en lectores de pantalla; `b` solo pone negrita sin importancia. |
+| `<em>` | **Énfasis o acento verbal.** | `<i>` (Italic) | `em` cambia el sentido de la frase; `i` es solo texto cursivo (términos técnicos, nombres científicos). |
+| `<del>` | Contenido **eliminado o tachado**. | `<s>` (Strikethrough) | `del` indica historial de cambio; `s` solo marca algo que ya no es vigente. |
+| `<ins>` | Contenido **agregado o nuevo**. | `<u>` (Underline) | `ins` complementa a `del`; `u` solo subraya (evita `u` porque parece un enlace). |
 
-```html
-<p><strong>Importante:</strong> guarda tu trabajo con frecuencia.</p>
-<p>Este término tiene <em>énfasis</em> dentro de la oración.</p>
-<p><mark>Texto resaltado</mark> para revisar después.</p>
-<p><small>Nota legal o información secundaria.</small></p>
-<p><del>Texto eliminado</del> y <ins>texto agregado</ins>.</p>
-<p>La palabra <u>revisar</u> está marcada para llamar la atención.</p>
-```
-
-- `strong` indica importancia.
-- `em` indica énfasis.
-- `mark` resalta una parte relacionada con el contexto.
-- `small` representa texto secundario o de menor importancia.
-- `del` representa contenido eliminado.
-- `ins` representa contenido agregado.
-- `u` marca un texto que necesita una atención especial, pero no debe usarse solo para decorar.
-
-`b`, `i` y `s` también existen, pero tienen significados más específicos:
+### Ejemplo práctico de formato semántico
 
 ```html
-<p><b>Palabra clave</b> dentro de una explicación.</p>
-<p><i>Nombre científico</i> dentro de un texto.</p>
-<p><s>Evento cancelado</s></p>
+<p><strong>Aviso urgente:</strong> La reunión cambió de horario.</p>
+<p>Este curso es <em>realmente</em> práctico.</p>
+<p>El precio anterior era <del>$100 USD</del> y el nuevo precio es <ins>$75 USD</ins>.</p>
+<p>Para revisar: <mark>entregar antes del viernes</mark>.</p>
+<p><small>Términos y condiciones sujetos a cambios sin previo aviso.</small></p>
 ```
 
-- `b` llama la atención sobre una palabra sin indicar importancia especial.
-- `i` representa una voz, término o expresión diferenciada.
-- `s` representa información que ya no es correcta o relevante.
+---
 
-### Qué observar en el formato del texto
+## 5. Expresiones matemáticas y referencias: `sup` y `sub`
 
-`strong`, `em`, `del` e `ins` aportan significado. Aunque el navegador suele mostrar estos elementos con estilos distintos, su función principal es explicar qué representa cada fragmento.
+- `sup` (*superscript*): Texto en posición **superior** (exponentes matemáticos, notas al pie de página).
+- `sub` (*subscript*): Texto en posición **inferior** (fórmulas químicas, índices numéricos).
+
+```html
+<p>La fórmula química del agua es H<sub>2</sub>O.</p>
+<p>El teorema de Pitágoras se expresa como a<sup>2</sup> + b<sup>2</sup> = c<sup>2</sup>.</p>
+<p>Este dato fue extraído de un estudio oficial<sup>[1]</sup>.</p>
+```
 
 > [!NOTE]
-> No elijas una etiqueta porque haga el texto negrita o inclinado. Elige la que describa mejor el significado; CSS se encargará de la apariencia.
+> `sup` y `sub` tienen valor semántico real en fórmulas y citas bibliográficas. No los uses solo para mover letras hacia arriba o abajo por razones decorativas.
 
-### Práctica de formato semántico
-
-Escribe un aviso que incluya:
-
-- Una parte importante.
-- Una palabra con énfasis.
-- Un texto resaltado.
-- Un dato corregido con `del` e `ins`.
-
-## 5. Texto superior e inferior: `sup` y `sub`
-
-`sup` coloca texto en una posición superior y `sub` en una posición inferior. Son útiles para exponentes, fórmulas y referencias.
-
-```html
-<p>La fórmula del agua es H<sub>2</sub>O.</p>
-<p>La expresión matemática es x<sup>2</sup> + y<sup>2</sup>.</p>
-<p>Consulta la referencia<sup>1</sup>.</p>
-```
-
-El número no cambia el tamaño mediante CSS: `sup` y `sub` expresan que ese texto tiene una relación superior o inferior con el contenido principal.
-
-### Qué observar en `sup` y `sub`
-
-- `sup` puede representar un exponente o una referencia.
-- `sub` puede representar parte de una fórmula.
-- El número o símbolo sigue siendo parte del contenido del texto.
-
-> [!CAUTION]
-> No uses `sup` o `sub` únicamente para mover texto hacia arriba o abajo por diseño. Si necesitas cambiar la posición visual, ese trabajo corresponde a CSS.
-
-### Reto de expresiones
-
-Escribe en HTML:
-
-- La fórmula del dióxido de carbono: CO₂.
-- La fórmula del área de un cuadrado: A = l².
-- Una nota al pie con un número superior.
+---
 
 ## 6. Abreviaturas, citas y código
 
-HTML tiene etiquetas para textos con significados particulares:
+Para textos con naturaleza técnica o literaria, HTML dispone de etiquetas específicas:
 
 ```html
-<p><abbr title="HyperText Markup Language">HTML</abbr> estructura el contenido web.</p>
-<p>Como dice el refrán: <q>La práctica hace al maestro.</q></p>
-<blockquote>
-  <p>Una estructura clara facilita el mantenimiento de una página.</p>
+<!-- Abreviaturas con explicación al pasar el ratón -->
+<p>Estamos aprendiendo <abbr title="HyperText Markup Language">HTML</abbr>.</p>
+
+<!-- Cita corta dentro de un párrafo -->
+<p>Como decía Steve Jobs: <q cite="https://ejemplo.com">Sigue hambriento, sigue alocado.</q></p>
+
+<!-- Cita en bloque extensa -->
+<blockquote cite="https://w3.org">
+  <p>El poder de la Web está en su universalidad. El acceso de todos, independientemente de la discapacidad, es un aspecto esencial.</p>
+  <cite>— Tim Berners-Lee, creador de la Web</cite>
 </blockquote>
-<p>Para abrir una página, escribe <code>index.html</code>.</p>
-<pre><code>h1 { color: red; }</code></pre>
+
+<!-- Fragmentos de código -->
+<p>Para crear un párrafo en HTML se utiliza la etiqueta <code>&lt;p&gt;</code>.</p>
+
+<!-- Bloque de código con espacios y saltos respetados -->
+<pre><code>function saludar() {
+  console.log("¡Hola, mundo!");
+}</code></pre>
 ```
 
-- `abbr` muestra una abreviatura con su significado completo en `title`.
-- `q` representa una cita breve dentro de un párrafo.
-- `blockquote` representa una cita extensa.
-- `code` representa una parte de código.
-- `pre` conserva espacios y saltos de línea, útil para mostrar código con formato.
+- `q`: Agrega automáticamente las comillas tipográficas según el idioma configurado en `<html lang="...">`.
+- `blockquote`: Bloque para citas largas que se destaca del resto del texto.
+- `code` y `pre`: `code` indica que el texto es código de programación; `pre` le ordena al navegador que mantenga los espacios en blanco e indentaciones exactas tal como fueron escritos.
 
-### Qué observar en estas etiquetas
+---
 
-Cada etiqueta comunica un tipo de texto distinto: una abreviatura, una cita breve, una cita extensa o código. El navegador puede aplicarles estilos predeterminados, pero el significado es lo más importante.
+## 7. Agrupación genérica en línea con `span`
 
-### Práctica de texto especializado
-
-Crea una explicación breve sobre HTML que incluya:
-
-- Una abreviatura.
-- Una cita breve.
-- Una cita extensa.
-- Un fragmento de código.
-
-## 7. Agrupar texto con `span`
-
-`span` agrupa una parte pequeña de texto sin darle un significado especial. Es útil cuando después quieres aplicarle CSS o identificarlo para JavaScript.
+La etiqueta `span` es un contenedor en línea **neutro**. No tiene ningún significado semántico por sí misma.
 
 ```html
-<p>Mi nivel actual es <span>principiante</span>.</p>
+<p>El estado del servidor es <span class="servidor-activo">Operativo</span>.</p>
 ```
 
-`span` no crea una sección ni un bloque nuevo. Solo marca una parte dentro de otro contenido.
+### ¿Para qué sirve `span`?
 
-### Qué observar en `span`
+Se utiliza para envolver una palabra o frase corta cuando después quieres aplicarle un estilo visual con CSS (como cambiarle el color) o manipularla con JavaScript, sin alterar el significado semántico del párrafo.
 
-Si quitas `span`, el texto seguirá apareciendo. Su función es identificar un fragmento pequeño para trabajarlo después, no crear una sección ni cambiar por sí solo la apariencia.
+---
 
-> [!IMPORTANT]
-> Usa `span` para fragmentos pequeños. Para agrupar temas completos utiliza etiquetas como `section`, `article` o `div` cuando corresponda.
+## 8. Atributos Globales indispensables
 
-### Reto de `span`
-
-Escribe un párrafo sobre tu aprendizaje y marca con `span` una palabra que después quieras cambiar de color con CSS. Explica por qué `span` es adecuado para esa palabra.
-
-## 8. Atributos relacionados con el texto
-
-Los atributos agregan información o identifican elementos. Ahora que entiendes el contenido, puedes estudiarlos al final de la lección.
+Los atributos son modificadores que se agregan a la etiqueta de apertura para aportar datos extra o identificar el elemento:
 
 ```html
-<h1 id="inicio" class="titulo-principal" title="Título de la página">
-  Mi portafolio
-</h1>
-<p lang="es" dir="ltr">Estoy aprendiendo HTML.</p>
+<p id="parrafo-destacado" class="alerta texto-grande" lang="en" title="Información extra">
+  This is an important warning message.
+</p>
 ```
 
-- `id` identifica un elemento único. Después puede servir para enlazarlo.
-- `class` agrupa elementos que compartirán características.
-- `title` ofrece información adicional cuando la persona pasa el cursor, aunque no debe sustituir contenido importante.
-- `lang` indica el idioma del contenido.
-- `dir` indica la dirección del texto, por ejemplo `ltr` de izquierda a derecha.
+| Atributo | Propósito | Regla de Oro |
+| --- | --- | --- |
+| `id` | Identificador **único** para un solo elemento en toda la página. | **No se puede repetir.** Solo puede existir un elemento con ese mismo `id` en todo el documento. |
+| `class` | Clasificador o etiqueta grupal para uno o varios elementos. | **Se puede repetir** en múltiples elementos que compartirán estilos. Un elemento puede tener varias clases separadas por espacios. |
+| `title` | Muestra un texto emergente (*tooltip*) al pasar el cursor por encima. | Útil como ayuda visual secundaria, pero no pongas información crítica ahí. |
+| `lang` | Cambia el idioma de ese fragmento específico de texto. | Ideal si estás escribiendo en español pero citas una frase en inglés o francés. |
 
-### Qué observar en los atributos
-
-Los atributos no son contenido independiente. Agregan información al elemento o lo identifican para que la página pueda enlazarlo, describirlo o aplicarle estilos más adelante.
-
-### Práctica de atributos
-
-Agrega a tu página:
-
-- Un `id` a la sección inicial.
-- Una `class` a dos párrafos relacionados.
-- Un `title` que aporte información adicional a un elemento.
-- `lang="es"` en el documento si todavía no lo agregaste en la lección anterior.
+---
 
 ## Reto final de la lección
 
-Crea una página de presentación que incluya:
+Crea un artículo de blog estructurado en tu archivo `index.html` que cumpla con toda la siguiente lista de verificación:
 
-- Un `h1` y por lo menos dos niveles adicionales de encabezado.
-- Párrafos con `strong`, `em`, `mark` y `small`.
-- Un ejemplo con `sup` y otro con `sub`.
-- Una cita con `q` o `blockquote`.
-- Un fragmento de código con `code`.
-- Una palabra agrupada con `span`.
-- Atributos `id`, `class`, `title` y `lang`.
+- [ ] Un único `h1` con el título del artículo y un `id="titulo-articulo"`.
+- [ ] Al menos dos secciones divididas con `h2`, y una de ellas subdividida con un `h3`.
+- [ ] Al menos tres párrafos `<p>` que incluyan:
+  - Una palabra importante con `<strong>`.
+  - Una palabra con énfasis con `<em>`.
+  - Un fragmento de texto marcado con `<mark>`.
+  - Una corrección histórica con `<del>` e `<ins>`.
+- [ ] Una dirección o poema que utilice correctamente `<br>` para saltos de línea justificados.
+- [ ] Una fórmula química o matemática con `<sup>` o `<sub>`.
+- [ ] Una abreviatura con `<abbr title="...">`.
+- [ ] Una cita textual con `<blockquote>` y su respectiva etiqueta `<cite>`.
+- [ ] Un bloque de código con `<pre><code>`.
+- [ ] Al menos dos párrafos que compartan la misma `class="parrafo-resumen"`.
 
-Revisa el resultado sin CSS y explica qué función cumple cada etiqueta. No avances hasta distinguir entre una etiqueta que describe el significado del texto y un estilo que solo cambiará su apariencia.
+### Preguntas de autoevaluación
+
+1. ¿Por qué es una mala práctica saltar de un `<h2>` directamente a un `<h5>`?
+2. ¿Cuál es la diferencia entre un elemento en bloque (`block`) y uno en línea (`inline`)?
+3. Si solo quieres poner una palabra en negrita sin que signifique "urgencia o importancia", ¿qué etiqueta debes usar y por qué?
+4. ¿Por qué el atributo `id` no debe repetirse en una misma página web?
+
+---
+
+## 📚 Recursos y documentación oficial
+
+Para profundizar en el formateo semántico y jerarquía de textos, consulta la documentación oficial de **MDN Web Docs**:
+
+- 📖 [Fundamentos de texto en HTML - MDN](https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/HTML_text_fundamentals)
+- 📖 [Elementos de bloque vs. elementos en línea - MDN](https://developer.mozilla.org/es/docs/Web/HTML/Block-level_elements)
+- 📖 [Atributos globales en HTML - MDN](https://developer.mozilla.org/es/docs/Web/HTML/Global_attributes)
