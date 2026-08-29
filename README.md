@@ -1,127 +1,115 @@
-# HTML de 0 a 100
+# GUIAS PARA APRENDER HTML5
 
-![Logo de HTML5](https://upload.wikimedia.org/wikipedia/commons/3/38/HTML5_Badge.svg)
+![HTML5](/assets/html.png)
 
-*Imagen: HTML5 Logo, disponible en [Wikimedia Commons](https://commons.wikimedia.org/wiki/File:HTML5_Badge.svg) bajo licencia Creative Commons.*
+**Ruta práctica, moderna y orientada a proyectos para dominar HTML5, semántica y accesibilidad web.**
 
-Curso práctico para aprender HTML desde cero y terminar creando la estructura de una landing page.
+[![HTML5](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white)](https://developer.mozilla.org/es/docs/Web/HTML)
+[![W3C Valid](https://img.shields.io/badge/W3C-Standards-blue?style=for-the-badge&logo=w3c&logoColor=white)](https://validator.w3.org/nu/)
+[![A11y](https://img.shields.io/badge/Accessibility-WCAG%20AA-success?style=for-the-badge)](https://www.w3.org/WAI/standards-guidelines/wcag/)
 
-## Antes de comenzar
+---
 
-Prepara Visual Studio Code, el navegador y la carpeta del curso en [Configuración del entorno](configuracion/README.md). Después continúa con la primera lección.
+## 🎯 Sobre este curso
+
+Este repositorio es una guía completa y estructurada paso a paso para aprender desarrollo web con **HTML5 moderno**. No busca que memorices etiquetas, sino que entiendas el **modelo mental**, la **semántica**, la **accesibilidad (A11y)** y las buenas prácticas que exige la industria actual.
 
 > [!TIP]
-> La meta no es memorizar etiquetas. La meta es entender qué representa cada elemento, cómo se relaciona con los demás y cuándo conviene utilizarlo.
+> **Antes de comenzar:** Prepara tu editor de código (VS Code) y las extensiones recomendadas en la guía de [Configuración del entorno](configuracion/README.md).
 
-## Qué encontrarás aquí
+---
 
-- Teoría explicada con palabras sencillas.
-- Ejemplos pequeños para escribir y probar.
-- Prácticas después de cada concepto.
-- Retos para demostrar lo aprendido.
-- Un reto integrador para unir todos los conceptos en una página completa.
-- Construcción progresiva de páginas reales.
-- Accesibilidad, semántica y buenas prácticas.
+## 🗺️ Ruta de Aprendizaje
 
-> [!IMPORTANT]
-> Avanza solo cuando puedas modificar el ejemplo y explicar con tus palabras qué cambio produjo.
+El curso está organizado en **4 fases progresivas** que cubren desde la sintaxis básica hasta proyectos completos de nivel profesional:
 
-## Ruta de aprendizaje
+### Fase 1: Fundamentos y Semántica Estructural
 
-### Fundamentos
+* 📄 **[01. Estructura HTML5](01-estructura-html/README.md):** El esqueleto base (`html`, `head`, `body`), DOCTYPE y flujo del navegador.
+* ✍️ **[02. Texto y Atributos](02-texto-y-atributos/README.md):** Jerarquía de encabezados (`h1`-`h6`), párrafos, formateo semántico y atributos globales.
+* 🔗 **[03. Enlaces y Listas](03-enlaces-y-listas/README.md):** Hipervínculos absolutos/relativos, listas ordenadas, desordenadas y de definición.
+* 🧱 **[04. Agrupación Semántica](04-agrupacion-semantica/README.md):** Layout moderno con `<header>`, `<nav>`, `<main>`, `<article>`, `<section>`, `<aside>` y `<footer>`.
 
-1. [Estructura de un documento HTML](01-estructura-html/README.md)
-2. [Texto, etiquetas y atributos](02-texto-y-atributos/README.md)
-3. [Enlaces y listas](03-enlaces-y-listas/README.md)
+### Fase 2: Contenido, Datos e Interactividad
 
-### Contenido y formularios
+* 🖼️ **[05. Contenido Embebido](05-contenido-embebido/README.md):** Imágenes responsivas (`picture`/`srcset`), audio, video nativo con subtítulos e `iframes`.
+* 📊 **[06. Tablas de Datos](06-tablas-de-datos/README.md):** Estructuración accesible de datos tabulares (`caption`, `thead`, `tbody`, `scope`, `colspan`/`rowspan`).
+* 📝 **[07. Formularios Modernos](07-formularios-modernos/README.md):** Captura de datos, validación nativa sin JS, tipos de `input`, `datalist` y `fieldset`.
+* ⚡ **[08. Elementos Interactivos](08-elementos-interactivos/README.md):** Componentes nativos como `<details>`, acordeones, modales con `<dialog>`, `<progress>`, `<meter>` y Popover API.
 
-1. [Contenido embebido](04-contenido-embebido/README.md)
-2. [Tablas y formularios](05-tablas-y-formularios/README.md)
-3. [Agrupar y dar significado al contenido](06-agrupacion-semántica/README.md)
-4. [Head, accesibilidad y validación](09-accesibilidad-y-validación/README.md)
-5. [Elementos interactivos y contenido adicional](10-elementos-interactivos/README.md)
+### Fase 3: Integración, SEO y Accesibilidad
 
-### Construcción de páginas
+* 🌐 **[09. Metadatos e Integración](09-metadatos-e-integracion/README.md):** Optimización `<head>`, SEO técnico, Open Graph para redes sociales, favicons y scripts (`defer`/`async`).
+* ♿ **[10. Accesibilidad y Validación](10-accesibilidad-y-validacion/README.md):** Estándares WCAG, reglas de WAI-ARIA, navegación por teclado y validación oficial del W3C.
+* 🗂️ **[11. Sitio Multipágina](11-sitio-multipagina/README.md):** Arquitectura de carpetas escalable, rutas relativas, `aria-current="page"` y migas de pan (*breadcrumbs*).
 
-1. [Construir páginas completas](07-construir-páginas/README.md)
-2. [Proyecto: portafolio y landing page](08-portafolio-y-landing/README.md)
-3. [Integrar todo el HTML](11-integracion-html/README.md)
+### Fase 4: Proyectos Reales
 
-### Proyecto final
+* 🚀 **[12. Proyecto Guiado: Landing Page SaaS](12-proyecto-guiado-landing/README.md):** Integración de todos los conceptos construyendo una landing page real estilizada con Pico CSS.
+* 🏆 **[13. Desafío Técnico Final](13-desafio-tecnico-final/README.md):** Prueba técnica autónoma sin ayuda para poner a prueba tu dominio profesional.
 
-1. [Reto integrador: una landing page completa](12-reto-integrador/README.md)
+---
 
-## Dos tipos de reto
+## 🔄 Metodología de Estudio
 
-### Reto de cada lección
-
-Cada lección termina con un reto pequeño y enfocado. Su objetivo es comprobar que entendiste el tema recién estudiado, como enlaces, imágenes, tablas, formularios o etiquetas semánticas.
-
-### Reto integrador
-
-Después de terminar todas las lecciones, construirás una landing page completa. Este proyecto reunirá estructura, texto, atributos, enlaces, listas, imágenes, contenido embebido, formularios, tablas, semántica, accesibilidad y elementos interactivos.
-
-> [!IMPORTANT]
-> No necesitas resolver el reto integrador de memoria. Puedes volver a cada README, consultar los ejemplos y usar la guía como referencia mientras construyes tu página.
-
-## Cómo estudiar cada lección
-
-Usa siempre este ciclo:
-
-> [!NOTE]
-> Los ejemplos están para escribirlos y probarlos. No los leas solamente: abre el navegador después de cada cambio.
-
-1. Lee la teoría.
-2. Escribe el ejemplo en tu propio archivo `.html`.
-3. Abre el archivo en el navegador.
-4. Cambia una cosa y observa el resultado.
-5. Explica con tus palabras qué ocurrió.
-6. Resuelve el reto sin copiar el ejemplo completo.
-
-## Estructura del proyecto
-
-Cada carpeta representa una etapa del curso y contiene su propia guía `README.md`.
+Para aprovechar al máximo cada lección, sigue este ciclo de aprendizaje activo:
 
 ```text
-html5/
-|-- README.md
-|-- configuracion/
-|   |-- README.md
-|-- 01-estructura-html/
-|   |-- README.md
-|   |-- ejemplo.html
-|   |-- reto.html
-|-- 02-texto-y-atributos/
-|   |-- README.md
-|   |-- ejemplo.html
-|   |-- reto.html
-|-- 12-reto-integrador/
-|   |-- README.md
-|   |-- index.html
-|-- ...
+[ 1. Leer Teoría y Modelo Mental ]
+               │
+               ▼
+[ 2. Escribir y Probar los Ejemplos en el Navegador ]
+               │
+               ▼
+[ 3. Romper el Código y Experimentar ]
+               │
+               ▼
+[ 4. Resolver el Reto con su Checklist ]
+               │
+               ▼
+[ 5. Responder las Preguntas de Autoevaluación ]
 ```
 
-Los archivos `ejemplo.html` y `reto.html` se irán creando durante el curso para practicar sin mezclar las lecciones.
+> [!IMPORTANT]
+> No avances de lección hasta haber completado el reto práctico y comprobar que tu código no contenga errores de validación.
 
-> [!WARNING]
-> No copies el reto completo desde la guía. Primero intenta resolverlo y vuelve al ejemplo solo para consultar una duda puntual.
+---
 
-## Al terminar HTML podrás
+## 📁 Estructura del Repositorio
 
-- Crear un documento HTML desde cero.
-- Elegir etiquetas por su significado.
-- Usar atributos, enlaces, listas, imágenes y formularios.
-- Organizar contenido con etiquetas semánticas.
-- Construir la base de un portafolio.
-- Construir la base de una landing page.
-- Revisar accesibilidad y errores comunes.
-- Dejar una estructura lista para aprender CSS.
+```text
+.
+├── configuracion/                  # Configuración de herramientas y extensiones
+├── 01-estructura-html/             # Lección 01 + Reto práctico
+├── 02-texto-y-atributos/           # Lección 02 + Reto práctico
+├── 03-enlaces-y-listas/            # Lección 03 + Reto práctico
+├── 04-agrupacion-semantica/        # Lección 04 + Reto práctico
+├── 05-contenido-embebido/          # Lección 05 + Reto práctico
+├── 06-tablas-de-datos/             # Lección 06 + Reto práctico
+├── 07-formularios-modernos/        # Lección 07 + Reto práctico
+├── 08-elementos-interactivos/      # Lección 08 + Reto práctico
+├── 09-metadatos-e-integracion/     # Lección 09 + Reto práctico
+├── 10-accesibilidad-y-validacion/  # Lección 10 + Reto práctico
+├── 11-arquitectura-multipagina/    # Lección 11 + Reto práctico
+├── 12-proyecto-guiado-landing/     # Proyecto integral con diseño
+├── 13-desafio-tecnico-final/       # Prueba técnica autónoma
+└── README.md                       # Este índice general
+```
 
-## Requisitos
+---
 
-- Visual Studio Code u otro editor.
-- Un navegador web.
-- Ganas de escribir, romper y volver a probar.
+## 🛠️ Requisitos previos
 
-Cuando termines está ruta, el siguiente paso será darle estilos con CSS.
+* Un editor de código (**Visual Studio Code** recomendado).
+* Un navegador moderno (**Google Chrome**, **Mozilla Firefox** o **Brave**).
+* Ganas de escribir código limpio, experimentar y construir proyectos reales.
+
+---
+
+## 📚 Documentación y Enlaces Oficiales
+
+* 📖 [MDN Web Docs - Referencia oficial de HTML](https://developer.mozilla.org/es/docs/Web/HTML)
+* 🌐 [Validador oficial de código Nu HTML Checker (W3C)](https://validator.w3.org/nu/)
+* ♿ [Iniciativa de Accesibilidad Web (WAI - W3C)](https://www.w3.org/WAI/)
+
+---
