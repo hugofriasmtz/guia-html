@@ -1,4 +1,4 @@
-# Lección 2: texto, jerarquía y atributos
+# Lección 2: Texto, jerarquía y atributos
 
 Esta lección continúa el documento que preparaste en [Estructura HTML5](../01-estructura-html/README.md). Ya comprendes el esqueleto base (`html`, `head`, `body`); ahora aprenderás a estructurar y dar significado real a todo el texto que vivirá dentro de `<body>`.
 

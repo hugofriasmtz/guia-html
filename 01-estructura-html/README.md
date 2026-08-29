@@ -1,4 +1,4 @@
-# Lección 1: estructura de un documento HTML5
+# Lección 1: Estructura de un documento HTML5
 
 Esta lección explica cómo nace un documento web y cómo se organizan sus partes fundamentales. Antes de escribir textos, enlaces o botones, necesitas preparar el esqueleto estándar que todo navegador web espera recibir.
 

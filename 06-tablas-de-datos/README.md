@@ -1,4 +1,4 @@
-# Lección 6: tablas de datos estructuradas
+# Lección 6: Tablas de datos estructuradas
 
 Esta lección continúa el trabajo de [Contenido embebido](../05-contenido-embebido/README.md). Aprenderás a estructurar información tabular (horarios, listas de precios, estadísticas, inventarios) de forma semántica y accesible para navegadores y lectores de pantalla.
 

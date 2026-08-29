@@ -1,4 +1,4 @@
-# Lección 3: enlaces y listas
+# Lección 3: Enlaces y listas
 
 Esta lección continúa el documento que preparaste en [Texto, etiquetas y atributos](../02-texto-y-atributos/README.md). Ya puedes organizar títulos, párrafos y dar formato semántico al contenido; ahora aprenderás a conectar páginas mediante enlaces y a estructurar conjuntos de datos con listas.
 
