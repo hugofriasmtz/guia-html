@@ -49,7 +49,7 @@ Cada lección tendrá sus propios archivos de ejemplo y de reto. Para la primera
 La estructura general del curso se verá así:
 
 ```text
-html_5/
+guia-html/
 |-- README.md
 |-- configuracion/
 |   |-- README.md
@@ -139,15 +139,15 @@ De esta forma puedes consultar siempre la versión original de las guías y trab
 En la página del repositorio, selecciona **Code**, copia la dirección HTTPS y ejecuta en la terminal:
 
 ```bash
-git clone https://github.com/hugofriasmtz/html_5.git
-cd html_5
+git clone https://github.com/hugofriasmtz/guia-html.git
+cd guia-html
 ```
 
 si tienes una llave SSH configurada, puedes usar la dirección SSH en lugar de HTTPS.
 
 ```bash
-git clone git@github.com:hugofriasmtz/html_5.git
-cd html_5
+git clone git@github.com:hugofriasmtz/guia-html.git
+cd guia-html
 ```
 
 Después abre esa carpeta en VS Code.
@@ -160,7 +160,7 @@ Crea tu rama antes de comenzar los ejercicios:
 git switch -c nombre-de-tu-rama
 ```
 
-Usa un nombre que te identifique, por ejemplo `ejercicios-hugo`.
+Usa un nombre que te identifique, por ejemplo `ejercicios-<tu-nombre>`.
 
 Comprueba en qué rama estás:
 
@@ -199,7 +199,7 @@ Antes de comenzar la primera lección, comprueba:
 - [ ] Elegí una herramienta para escribir HTML.
 - [ ] Visual Studio Code está instalado y abre correctamente.
 - [ ] El navegador abre páginas HTML.
-- [ ] La carpeta `html_5_css` está abierta en VS Code.
+- [ ] La carpeta `guia-html` está abierta en VS Code.
 - [ ] Puedes crear y guardar un archivo.
 - [ ] VS Code reconoce los archivos `.html` como HTML.
 - [ ] El atajo `!` + `Tab` genera una plantilla.
