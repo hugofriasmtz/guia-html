@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Listas</title>
+</head>
+<body>
+    <h1 id="inicio">Listas</h1>
+    <!-- Secction listas desordenadas -->
+    <section id="unordered-list">
+        <h2>Tecnologias a dominar este año</h2>
+        <ul>
+            <li>Python</li>
+            <li>HTML5</li>
+            <li>GIT</li>
+            <li>GO</li>
+        </ul>
+    </section>
+    <!-- Fin del secction listas desordenadas -->
+
+    <!-- Secction listas ordenadas -->
+    <section id="ordered-list">
+        <h2>Pasos para empezar a ocupar mi Lap</h2>
+        <ol start="1">
+            <li>Enciendo mi lap</li>
+            <li>Desbloqueo mi lap con mi pin</li>
+            <li>Abro la app "Terminarl"
+                para ocupar mi 
+                <strong>
+                    <abbr title="Windows Subsystem for Linux">WSL</abbr>
+                </strong>.</li>
+            <li>Abro mi navegador Brave</li>
+        </ol>
+    </section>
+    <!-- Fin del secction listas ordenadas --> 
+
+    <!-- Secction listas de descripcion -->
+    <section id="description-list">
+        <h2>Glorario Python</h2>
+        <dl>
+            <dt>Variable</dt>
+            <dd>Espacio en memoria que almacena un tipo de dato.</dd>
+
+            <dt>PIP</dt>
+            <dd>Gestor de paquetas de Python.</dd>
+
+            <dt>Tupla</dt>
+            <dd>Tipo de dato inmutable</dd>
+        </dl>
+    </section>
+
+    <!-- Fin del Secction listas de descripcion -->
+
+    <!-- Secction listas aninadas -->
+
+    <section>
+        <h2>Secciones de las listas en HTML</h2>
+        <ul>
+            <li>
+                <a href="#inicio">Inicio</a>
+                <ul>
+                    <li>
+                        <a href="#unordered-list">Listas desordenadas.</a>
+                        <ul>
+                            <li><a href="#ordered-list">Listas ordenadas.</a></li>
+                            <li><a href="#description-list">Listas de descripcion.</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </li>
+            <li><a href="./index.html">Index</a></li>
+        </ul>
+    </section>
+    <!-- Fin del secction listas aninadas -->
+</body>
+</html>
