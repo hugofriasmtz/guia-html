@@ -206,19 +206,19 @@ Los atributos son modificadores que se agregan a la etiqueta de apertura para ap
 
 Crea un artículo de blog estructurado en tu archivo `index.html` que cumpla con toda la siguiente lista de verificación:
 
-- [ ] Un único `h1` con el título del artículo y un `id="titulo-articulo"`.
-- [ ] Al menos dos secciones divididas con `h2`, y una de ellas subdividida con un `h3`.
-- [ ] Al menos tres párrafos `<p>` que incluyan:
+- [x] Un único `h1` con el título del artículo y un `id="titulo-articulo"`.
+- [x] Al menos dos secciones divididas con `h2`, y una de ellas subdividida con un `h3`.
+- [x] Al menos tres párrafos `<p>` que incluyan:
   - Una palabra importante con `<strong>`.
   - Una palabra con énfasis con `<em>`.
   - Un fragmento de texto marcado con `<mark>`.
   - Una corrección histórica con `<del>` e `<ins>`.
-- [ ] Una dirección o poema que utilice correctamente `<br>` para saltos de línea justificados.
-- [ ] Una fórmula química o matemática con `<sup>` o `<sub>`.
-- [ ] Una abreviatura con `<abbr title="...">`.
-- [ ] Una cita textual con `<blockquote>` y su respectiva etiqueta `<cite>`.
-- [ ] Un bloque de código con `<pre><code>`.
-- [ ] Al menos dos párrafos que compartan la misma `class="parrafo-resumen"`.
+- [x] Una dirección o poema que utilice correctamente `<br>` para saltos de línea justificados.
+- [x] Una fórmula química o matemática con `<sup>` o `<sub>`.
+- [x] Una abreviatura con `<abbr title="...">`.
+- [x] Una cita textual con `<blockquote>` y su respectiva etiqueta `<cite>`.
+- [x] Un bloque de código con `<pre><code>`.
+- [x] Al menos dos párrafos que compartan la misma `class="parrafo-resumen"`.
 
 ### Preguntas de autoevaluación
 

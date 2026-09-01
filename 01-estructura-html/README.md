@@ -144,13 +144,13 @@ Los comentarios te permiten dejar notas explicativas en el código que el navega
 
 Crea y comprueba tu propio archivo `index.html` cumpliendo los siguientes requisitos:
 
-1. [ ] El archivo debe llamarse exactamente `index.html` y estar guardado dentro de su propia carpeta.
-2. [ ] Debe iniciar con la declaración `<!DOCTYPE html>`.
-3. [ ] El elemento `<html>` debe tener el atributo `lang="es"`.
-4. [ ] El `<head>` debe contener el `charset="UTF-8"`, el `viewport` y un `<title>` descriptivo (por ejemplo: `Mi Portafolio - Inicio`).
-5. [ ] Debe incluir al menos un comentario dentro de `<body>` explicando qué contendrá esa sección más adelante.
-6. [ ] Todo el código debe tener una indentación limpia y sin cruce de etiquetas.
-7. [ ] Abre el archivo en tu navegador haciendo doble clic sobre él o usando la extensión *Live Server* de VS Code y verifica que el título de la pestaña sea el correcto.
+1. [x] El archivo debe llamarse exactamente `index.html` y estar guardado dentro de su propia carpeta.
+2. [x] Debe iniciar con la declaración `<!DOCTYPE html>`.
+3. [x] El elemento `<html>` debe tener el atributo `lang="es"`.
+4. [x] El `<head>` debe contener el `charset="UTF-8"`, el `viewport` y un `<title>` descriptivo (por ejemplo: `Mi Portafolio - Inicio`).
+5. [x] Debe incluir al menos un comentario dentro de `<body>` explicando qué contendrá esa sección más adelante.
+6. [x] Todo el código debe tener una indentación limpia y sin cruce de etiquetas.
+7. [x] Abre el archivo en tu navegador haciendo doble clic sobre él o usando la extensión *Live Server* de VS Code y verifica que el título de la pestaña sea el correcto.
 
 ### Preguntas de autoevaluación
 

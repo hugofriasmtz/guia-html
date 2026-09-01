@@ -229,13 +229,13 @@ Crea un menú de navegación para tu página utilizando la etiqueta semántica `
 
 Crea una **Guía de Viaje para una Ciudad** en tu página web que incluya todos los conceptos vistos en esta lección:
 
-- [ ] Un encabezado principal `h1` con el `id="inicio"`.
-- [ ] Una barra de navegación `<nav>` con una lista de enlaces que salten a las diferentes secciones (`#lugares`, `#itinerario`, `#glosario`).
-- [ ] Una sección (`#lugares`) con una **lista no ordenada** de al menos 4 sitios recomendados.
-- [ ] Una sección (`#itinerario`) con una **lista ordenada** que describa el paso a paso para recorrer la ciudad en un día.
-- [ ] Una sección (`#glosario`) con una **lista de descripción** (`dl`) que explique 2 palabras o modismos típicos de ese lugar.
-- [ ] Al menos un enlace externo con `target="_blank"` y `rel="noopener noreferrer"` hacia la página oficial de turismo.
-- [ ] Un enlace al final de la página que te devuelva a `#inicio`.
+- [x] Un encabezado principal `h1` con el `id="inicio"`.
+- [x] Una barra de navegación `<nav>` con una lista de enlaces que salten a las diferentes secciones (`#lugares`, `#itinerario`, `#glosario`).
+- [x] Una sección (`#lugares`) con una **lista no ordenada** de al menos 4 sitios recomendados.
+- [x] Una sección (`#itinerario`) con una **lista ordenada** que describa el paso a paso para recorrer la ciudad en un día.
+- [x] Una sección (`#glosario`) con una **lista de descripción** (`dl`) que explique 2 palabras o modismos típicos de ese lugar.
+- [x] Al menos un enlace externo con `target="_blank"` y `rel="noopener noreferrer"` hacia la página oficial de turismo.
+- [x] Un enlace al final de la página que te devuelva a `#inicio`.
 
 Comprueba en tu navegador que cada enlace cumpla su función y que todas las listas mantengan su estructura limpia y semántica.
 
