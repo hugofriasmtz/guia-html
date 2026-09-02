@@ -157,13 +157,13 @@ La etiqueta `<div>` (*division*) es un contenedor en bloque **sin ningún valor 
 
 Crea una maqueta semántica completa para el sitio web de un **Restaurante local** en tu archivo `index.html`:
 
-- [ ] Un `<header>` con el nombre del restaurante (`h1`) y un menú de navegación `<nav>`.
-- [ ] Un único elemento `<main>` que envuelva todo el cuerpo central de la página.
-- [ ] Una `<section>` de "Especialidades del Día" con al menos 2 `<article>` (cada plato con su nombre `h3`, descripción y precio).
-- [ ] Una `<section>` de "Horarios y Ubicación" con los datos del local.
-- [ ] Un `<aside>` con una promoción especial o el mensaje del chef del mes.
-- [ ] Un `<footer>` con el copyright y enlaces de contacto o redes sociales.
-- [ ] Verifica que no existan errores de anidamiento y que la jerarquía de títulos (`h1`, `h2`, `h3`) sea coherente.
+- [x] Un `<header>` con el nombre del restaurante (`h1`) y un menú de navegación `<nav>`.
+- [x] Un único elemento `<main>` que envuelva todo el cuerpo central de la página.
+- [x] Una `<section>` de "Especialidades del Día" con al menos 2 `<article>` (cada plato con su nombre `h3`, descripción y precio).
+- [x] Una `<section>` de "Horarios y Ubicación" con los datos del local.
+- [x] Un `<aside>` con una promoción especial o el mensaje del chef del mes.
+- [x] Un `<footer>` con el copyright y enlaces de contacto o redes sociales.
+- [x] Verifica que no existan errores de anidamiento y que la jerarquía de títulos (`h1`, `h2`, `h3`) sea coherente.
 
 ### Preguntas de autoevaluación
 
