@@ -153,12 +153,12 @@ La etiqueta `<iframe>` (*inline frame*) permite incrustar un documento externo d
 
 Crea una página de **Reseña de una Película, Álbum Musical o Documental** en tu archivo `index.html`:
 
-1. [ ] Una imagen principal que utilice atributos `src`, `alt` descriptivo, `width`, `height` y `loading="lazy"`.
-2. [ ] Una sección que incluya una imagen dentro de `<figure>` con su respectivo `<figcaption>`.
-3. [ ] Una implementación de imagen adaptable con `<picture>` que ofrezca al menos un formato alternativo (`<source>`) y un `<img>` de respaldo.
-4. [ ] Un reproductor `<video>` o `<audio>` con `controls` y un texto de respaldo con enlace de descarga.
-5. [ ] Un mapa o contenido incrustado con `<iframe>` que incluya su atributo `title` descriptivo.
-6. [ ] Toda la multimedia debe estar organizada dentro de su estructura semántica (`<main>`, `<section>`, `<article>`).
+1. [x] Una imagen principal que utilice atributos `src`, `alt` descriptivo, `width`, `height` y `loading="lazy"`.
+2. [x] Una sección que incluya una imagen dentro de `<figure>` con su respectivo `<figcaption>`.
+3. [x] Una implementación de imagen adaptable con `<picture>` que ofrezca al menos un formato alternativo (`<source>`) y un `<img>` de respaldo.
+4. [x] Un reproductor `<video>` o `<audio>` con `controls` y un texto de respaldo con enlace de descarga.
+5. [x] Un mapa o contenido incrustado con `<iframe>` que incluya su atributo `title` descriptivo.
+6. [x] Toda la multimedia debe estar organizada dentro de su estructura semántica (`<main>`, `<section>`, `<article>`).
 
 ### Preguntas de autoevaluación
 
