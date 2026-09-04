@@ -141,11 +141,11 @@ ROWSPAN (Une filas verticalmente):
 
 Crea una **Tabla Comparativa de Planes de Precios** para un servicio digital en tu archivo `index.html`:
 
-- [ ] Un `<caption>` descriptivo sobre los planes de suscripción.
-- [ ] Una sección `<thead>` con los nombres de los planes y el atributo `scope="col"`.
-- [ ] Una sección `<tbody>` con al menos 4 características comparadas, usando `scope="row"` en la primera celda de cada fila.
-- [ ] Al menos una celda que utilice `colspan` (por ejemplo, una característica que aplique a todos los planes) o `rowspan`.
-- [ ] Una sección `<tfoot>` con el precio total o un resumen de garantía.
+- [x] Un `<caption>` descriptivo sobre los planes de suscripción.
+- [x] Una sección `<thead>` con los nombres de los planes y el atributo `scope="col"`.
+- [x] Una sección `<tbody>` con al menos 4 características comparadas, usando `scope="row"` en la primera celda de cada fila.
+- [x] Al menos una celda que utilice `colspan` (por ejemplo, una característica que aplique a todos los planes) o `rowspan`.
+- [x] Una sección `<tfoot>` con el precio total o un resumen de garantía.
 
 ### Preguntas de autoevaluación
 
