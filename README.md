@@ -113,3 +113,7 @@ Para aprovechar al máximo cada lección, sigue este ciclo de aprendizaje activo
 * ♿ [Iniciativa de Accesibilidad Web (WAI - W3C)](https://www.w3.org/WAI/)
 
 ---
+
+## License
+
+[MIT License](LICENSE) © 2026 Hugo Frias
