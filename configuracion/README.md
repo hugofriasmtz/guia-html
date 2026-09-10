@@ -1,210 +1,195 @@
-# Configuración del entorno
+# Configuración del entorno de desarrollo
 
-HTML puede aprenderse y escribirse en cualquier programa que permita crear archivos de texto, incluso en una herramienta sencilla como el Bloc de notas. También puedes usar [Sublime Text](https://www.sublimetext.com/), [Notepad++](https://notepad-plus-plus.org/), [Vim](https://www.vim.org/) u otra opción similar.
+HTML puede aprenderse y escribirse en cualquier programa que permita editar texto plano, incluso en herramientas básicas como el Bloc de notas. También puedes usar editores como [Sublime Text](https://www.sublimetext.com/), [Notepad++](https://notepad-plus-plus.org/) o [Vim](https://www.vim.org/).
 
-En este curso utilizaremos [Visual Studio Code](https://code.visualstudio.com/) porque ofrece autocompletado, Emmet y extensiones que hacen más cómodo el aprendizaje. Estas ayudas permiten trabajar más rápido, pero no son necesarias para que HTML funcione.
+Sin embargo, en este curso utilizaremos **[Visual Studio Code](https://code.visualstudio.com/)** porque ofrece autocompletado inteligente, motor de atajos Emmet y extensiones que facilitan el aprendizaje profesional sin ocultar el funcionamiento real de la web.
 
-También necesitarás un navegador para abrir y revisar tus páginas. Además, usaremos la extensión Live Preview para ver los cambios con mayor comodidad. Esta configuración se realiza una sola vez para todo el curso.
+Esta configuración se realiza **una sola vez** al inicio del curso.
 
 > [!TIP]
-> No necesitas una herramienta específica para aprender HTML. Seguiremos los ejemplos con Visual Studio Code y Live Preview, pero los conceptos funcionan igual en cualquier otra opción.
+> No estás obligado a usar herramientas complejas para escribir HTML. Seguiremos los ejercicios con Visual Studio Code y la extensión **Live Preview**, pero todos los conceptos y etiquetas funcionan exactamente igual en cualquier editor y navegador del mundo.
 
-## 1. Elige tu herramienta
+---
 
-Puedes elegir una de estas opciones:
+## 1. Elige tu herramienta de trabajo
 
-- **[Visual Studio Code](https://code.visualstudio.com/):** es la opción que usaremos en este curso.
-- **Otra herramienta para escribir texto:** también funciona, aunque los atajos pueden cambiar.
-- **Editor de texto sencillo:** permite escribir HTML, pero tendrás menos ayudas automáticas.
+Para seguir el curso necesitarás:
 
-Si utilizarás otra opción, conserva el mismo nombre de archivo y escribe el HTML de la misma manera. Cuando la guía mencione un atajo específico de VS Code, busca la función equivalente en tu herramienta.
+1. **Un editor de código:** Recomendamos descargar e instalar **[Visual Studio Code](https://code.visualstudio.com/)** (gratuito y disponible para Windows, macOS y Linux).
+2. **Un navegador web moderno:** Como Firefox, Google Chrome, Brave o Edge (donde probaremos nuestras páginas y utilizaremos las Herramientas de Desarrollador con la tecla `F12`).
+3. **La carpeta del curso:** El directorio donde guardarás tus archivos y lecciones.
 
-## 2. Comprueba las herramientas
+Si decides utilizar otro editor, conserva exactamente los mismos nombres de archivos y estructura de código que explicamos en las guías.
 
-Necesitas:
+---
 
-- Un programa para crear archivos de texto.
-- Un navegador, como Firefox, Chrome, Brave.
-- Una carpeta para guardar el curso.
+## 2. Abre la carpeta del curso en Visual Studio Code
 
-Ábrelo y confirma que puedes crear y guardar archivos de texto.
+Para que las rutas de los archivos y los enlaces relativos funcionen correctamente, debemos abrir la carpeta completa del proyecto como espacio de trabajo:
 
-## 3. Abre la carpeta del curso en Visual Studio Code
-
-Como este curso utilizará Visual Studio Code, seguiremos estos pasos:
-
-1. Selecciona **File > Open Folder**.
-2. Abre la carpeta `<nombre-de-la-carpeta>`.
-3. Comprueba que las carpetas de las lecciones aparecen en el explorador lateral.
-
-La carpeta abierta será la raíz del proyecto. Las rutas de los archivos se interpretarán tomando esa carpeta como referencia.
+1. Abre Visual Studio Code.
+2. En el menú superior, selecciona **File > Open Folder...** (Archivo > Abrir carpeta...).
+3. Selecciona la carpeta raíz del curso (`guia-html`).
+4. Comprueba que las carpetas de las lecciones aparezcan ordenadas en el explorador lateral izquierdo.
 
 > [!IMPORTANT]
-> Abre la carpeta completa del curso, no solamente un archivo individual. Así podrás navegar entre las lecciones y mantener organizados tus ejercicios. Si usas otro editor, abre la carpeta completa con la opción equivalente.
+> **Abre siempre la carpeta completa del curso**, no archivos sueltos individuales. Al abrir la carpeta raíz, VS Code entiende la jerarquía del proyecto y las rutas relativas funcionarán de forma predecible.
 
-## 4. Crea tu carpeta de práctica
+---
 
-Cada lección tendrá sus propios archivos de ejemplo y de reto. Para la primera lección, crearás la carpeta desde su README. No necesitas crear todas las carpetas de ejercicios ahora.
+## 3. Dinámica de trabajo: Los dos archivos por lección
 
-La estructura general del curso se verá así:
+Para garantizar que aprendas experimentando sin miedo a romper tu trabajo final, en casi todas las lecciones trabajarás con **dos archivos** dentro de cada carpeta:
 
 ```text
 guia-html/
-|-- README.md
-|-- configuracion/
-|   |-- README.md
-|-- 01-estructura-html/
-|   |-- README.md
-|   |-- mi-primera-pagina/
-|-- 02-texto-y-atributos/
-|   |-- README.md
-|-- ...
+├── README.md
+├── configuracion/
+│   └── README.md
+├── 01-estructura-html/
+│   ├── README.md                <-- Guía de estudio de la lección
+│   ├── index.html               <-- Tu LABORATORIO (para probar las micro-prácticas)
+│   └── reto.html                <-- Tu RETO FINAL (proyecto autónomo desde cero)
+├── 02-texto-y-atributos/
+│   ├── README.md
+│   ├── index.html
+│   └── reto.html
+├── 03-enlaces-y-listas/
+├── ...
+├── 12-proyecto-guiado-landing/  <-- Taller integrador guiado
+└── 13-desafio-tecnico-final/    <-- Examen técnico final autónomo
 ```
 
-## 5. Cómo reconocer un archivo HTML
+- **`index.html` (El Laboratorio):** Es tu mesa de experimentos. Aquí seguirás las micro-prácticas paso a paso, probarás etiquetas, provocarás errores intencionales y auditarás el código en el navegador.
+- **`reto.html` (El Proyecto Autónomo):** Es el desafío técnico final de cada lección. Una hoja en blanco con una lista de requisitos del mundo real que resolverás por tu cuenta para consolidar lo aprendido.
 
-Un archivo HTML termina en `.html`. Por ejemplo:
+---
+
+## 4. Cómo reconocer y nombrar un archivo HTML
+
+Un archivo web siempre debe terminar con la extensión **`.html`**:
 
 ```text
 index.html
+reto.html
 ```
 
-No debe terminar en `.html.txt`. Si Visual Studio Code reconoce correctamente el archivo, normalmente mostrará HTML como lenguaje en la esquina inferior derecha.
+- **Regla de oro:** Escribe los nombres siempre en **minúsculas, sin espacios, sin tildes y sin eñes**. Si el nombre tiene varias palabras, sepáralas con guiones medios (ej. `sobre-mi.html`).
+- Evita que tu sistema operativo guarde archivos con doble extensión accidental como `index.html.txt`.
+- Si Visual Studio Code reconoce el archivo correctamente, mostrará la palabra **HTML** en la esquina inferior derecha de la barra de estado.
 
-## 6. Activa Emmet en VS Code
+---
 
-Emmet es una herramienta incluida en Visual Studio Code que permite escribir estructuras HTML más rápido.
+## 5. El motor de atajos: Emmet en VS Code
 
-Para comprobarlo:
+Emmet es una herramienta de productividad integrada nativamente en Visual Studio Code que permite escribir esqueletos y etiquetas HTML en milisegundos.
+
+Para comprobar que está activo:
 
 1. Crea o abre un archivo que termine en `.html`.
-2. Escribe `!`.
-3. Presiona `Tab`.
-4. Comprueba que aparece una plantilla HTML.
+2. Escribe un único signo de admiración: `!`
+3. Presiona la tecla **`Enter`** (o **`Tab`**).
+4. Comprueba que aparece de inmediato la plantilla base estándar de HTML5.
 
 > [!WARNING]
-> Si `!` + `Tab` no funciona, revisa que el archivo termine en `.html` y que el lenguaje seleccionado sea HTML. Puedes cambiarlo desde la esquina inferior derecha del editor.
+> Si `!` + `Enter` no genera la plantilla, verifica en la esquina inferior derecha que el modo de lenguaje del archivo diga **HTML**. Si dice "Plain Text", haz clic sobre él y selecciona HTML en la lista.
 
-## 7. Instala y usa Live Preview
+---
 
-[Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server) es una extensión de Visual Studio Code que muestra la página mientras trabajas y permite revisar los cambios con mayor comodidad.
+## 6. Instala y configura Live Preview
 
-Para instalarla:
+**[Live Preview](https://marketplace.visualstudio.com/items?itemName=ms-vscode.live-server)** es una extensión oficial desarrollada por **Microsoft** para Visual Studio Code. Permite visualizar tu página web en tiempo real dentro de una pestaña interna del editor, actualizando los cambios automáticamente cada vez que guardas el archivo.
 
-1. Abre el panel de extensiones con el icono de pieza de rompe-cabeza de la barra lateral.
-2. Busca `Live Preview`.
-3. Instala la extensión publicada por **Microsoft**.
-4. Abre un archivo `.html`.
-5. Haz clic derecho dentro del archivo.
-6. Selecciona **Show Preview**.
-7. Comprueba que se abre una nueva ventana con tu página.
+### Pasos para instalarla
 
-> [!IMPORTANT]
-> En este curso usaremos Live Preview para revisar los ejercicios. No es obligatorio para que HTML funcione: también puedes abrir el archivo `.html` directamente en el navegador.
+1. Haz clic en el icono de **Extensiones** en la barra lateral izquierda de VS Code (o presiona `Ctrl + Shift + X` / `Cmd + Shift + X`).
+2. En la barra de búsqueda, escribe `Live Preview`.
+3. Localiza la extensión publicada por **Microsoft** y haz clic en **Install**.
 
-## 8. Abre un archivo directamente en el navegador
+### Cómo usarla en tus ejercicios
 
-Para ver una página HTML:
+1. Abre cualquier archivo `.html` (por ejemplo, tu `index.html`).
+2. Haz clic derecho en cualquier parte del editor de código.
+3. Selecciona la opción **Live Preview: Show Preview**.
+4. Se abrirá una pestaña al lado de tu código mostrando el resultado visual en vivo.
 
-1. Guarda el archivo con Ctrl+S.
-2. Busca el archivo en el explorador de archivos.
-3. Ábrelo con tu navegador.
-4. Regresa a VS Code, cambia algo y guarda.
-5. Actualiza la página del navegador.
+> [!NOTE]
+> Live Preview también levanta un **servidor local de pruebas**. Si prefieres ver tu página en una ventana completa de tu navegador habitual (Chrome, Firefox, Brave), puedes hacer clic en el botón con forma de flecha saliente en la esquina superior de la pestaña de vista previa.
 
-Si no estás usando Visual Studio Code o Live Preview, guarda el archivo, ábrelo desde el explorador de archivos y actualiza el navegador después de cada cambio.
+---
 
-## 9. Extensiones opcionales de VS Code
+## 7. Extensiones opcionales recomendadas
 
-Puedes usar estas extensiones, pero no son obligatorias:
+Puedes instalar estas extensiones complementarias para mejorar tu flujo de trabajo, aunque no son obligatorias:
 
-- [Prettier](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode): ayuda a dar formato consistente al código.
-- [Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag): cambia automáticamente una etiqueta de cierre cuando modificas la de apertura.
+- **[Prettier - Code formatter](https://marketplace.visualstudio.com/items?itemName=esbenp.prettier-vscode):** Formatea e indenta automáticamente tu código con espacios limpios cada vez que guardas (`Ctrl + S`).
+- **[Auto Rename Tag](https://marketplace.visualstudio.com/items?itemName=formulahendry.auto-rename-tag):** Si cambias el nombre de una etiqueta de apertura (ej. de `<h2>` a `<h3>`), renombra automáticamente la etiqueta de cierre correspondiente.
 
-Instala una extensión solo cuando entiendas qué problema resuelve. La herramienta debe ayudarte a aprender, no ocultar lo que ocurre en el código.
+> [!TIP]
+> Instala extensiones solo cuando comprendas qué problema resuelven. La herramienta debe ayudarte a escribir más cómodo, no ocultar lo que ocurre detrás del lenguaje.
 
-## 10. Opción para trabajar con Git y GitHub
+---
 
-Si ya conoces Git y GitHub, puedes clonar el repositorio para obtener las guías y la estructura completa del curso.
+## 8. Flujo de trabajo con Git y GitHub (Opcional)
 
-La organización recomendada es:
+Si ya tienes conocimientos básicos de Git, te recomendamos trabajar con un sistema de ramas para mantener intactas las guías teóricas y guardar tus ejercicios personales:
 
-- `main`: contiene las guías oficiales del curso.
-- Tu rama personal: contiene tus ejercicios, cambios y avances.
+- `main`: Contiene las lecciones y guías originales del curso.
+- `ejercicios-<tu-nombre>`: Tu rama personal de trabajo donde resolverás las prácticas y retos.
 
-De esta forma puedes consultar siempre la versión original de las guías y trabajar con libertad sin modificar `main`.
+### 1. Abre la terminal integrada de VS Code
 
-### Clonar el repositorio
+Presiona el atajo ``Ctrl + ` `` (o `Ctrl + ñ` según tu teclado) o ve al menú superior **Terminal > New Terminal**.
 
-En la página del repositorio, selecciona **Code**, copia la dirección HTTPS y ejecuta en la terminal:
+### 2. Clona el repositorio
 
 ```bash
+# Vía HTTPS
 git clone https://github.com/hugofriasmtz/guia-html.git
 cd guia-html
-```
 
-si tienes una llave SSH configurada, puedes usar la dirección SSH en lugar de HTTPS.
-
-```bash
+# O vía SSH (si tienes llaves configuradas)
 git clone git@github.com:hugofriasmtz/guia-html.git
 cd guia-html
 ```
 
-Después abre esa carpeta en VS Code.
-
-### Crear tu rama personal
-
-Crea tu rama antes de comenzar los ejercicios:
+### 3. Crea tu rama personal antes de empezar
 
 ```bash
-git switch -c nombre-de-tu-rama
+git switch -c ejercicios-mi-nombre
 ```
 
-Usa un nombre que te identifique, por ejemplo `ejercicios-<tu-nombre>`.
-
-Comprueba en qué rama estás:
+Confirma que estás en tu rama ejecutando:
 
 ```bash
 git branch --show-current
 ```
 
-El resultado debe mostrar el nombre de tu rama personal.
+### 4. Guarda tus avances
 
-### Guardar tus avances
-
-Cuando termines un ejercicio, puedes guardar los cambios en tu rama:
+Cada vez que concluyas una lección o reto:
 
 ```bash
 git add .
-git commit -m "Completa ejercicio de estructura HTML"
-git push -u origin nombre-de-tu-rama
+git commit -m "Completa Lección 01: Estructura HTML y reto final"
+git push -u origin ejercicios-mi-nombre
 ```
 
-Reemplaza `nombre-de-tu-rama` por el nombre real de tu rama.
-
-> [!IMPORTANT]
-> Antes de crear o modificar ejercicios, confirma que no estás en `main`. Tus prácticas deben guardarse en tu rama personal.
-
-Revisa los archivos incluidos antes de confirmar los cambios y mantén tus ejercicios dentro de la rama personal.
-
 > [!CAUTION]
-> No uses `git add .` sin revisar los archivos que vas a guardar. Evita subir contraseñas, datos personales, archivos innecesarios o imágenes con una licencia que no permita compartirlas.
+> Antes de hacer `git add .`, revisa qué archivos estás guardando. Nunca subas archivos temporales, contraseñas ni datos sensibles a un repositorio público. Si aún no sabes usar Git, no te preocupes: puedes crear y guardar tus archivos directamente en VS Code sin tocar la terminal.
 
-Si todavía no conoces Git, puedes trabajar directamente con las carpetas y los archivos desde VS Code. Git es una forma de organizar versiones, no un requisito para aprender HTML.
+---
 
-## 11. Revisión final
+## 9. Lista de comprobación previa al curso
 
-Antes de comenzar la primera lección, comprueba:
+Antes de abrir la primera lección, verifica que tu entorno esté a punto:
 
-- [ ] Elegí una herramienta para escribir HTML.
 - [ ] Visual Studio Code está instalado y abre correctamente.
-- [ ] El navegador abre páginas HTML.
-- [ ] La carpeta `guia-html` está abierta en VS Code.
-- [ ] Puedes crear y guardar un archivo.
-- [ ] VS Code reconoce los archivos `.html` como HTML.
-- [ ] El atajo `!` + `Tab` genera una plantilla.
-- [ ] Instalé Live Preview en VS Code.
-- [ ] Sé abrir una página con **Show Preview**.
-- [ ] Sabes actualizar la página en el navegador.
+- [ ] Tu navegador web habitual abre y visualiza páginas web.
+- [ ] La carpeta raíz `guia-html` está abierta en el explorador de VS Code.
+- [ ] La extensión **Live Preview de Microsoft** está instalada.
+- [ ] Al escribir `!` y presionar `Enter` en un archivo `.html`, se genera la plantilla base de HTML5.
+- [ ] Sabes abrir la vista previa con clic derecho $\rightarrow$ **Show Preview**.
+- [ ] Tienes claro que usarás `index.html` para experimentar y `reto.html` para resolver los desafíos.
 
-Cuando termines esta lista, continúa con [Estructura de un documento HTML](../01-estructura-html/README.md).
+¡Todo listo! Continúa con la **[Lección 1: Estructura de un documento HTML5](../01-estructura-html/README.md)**.

@@ -1,209 +1,244 @@
 # Lección 3: Enlaces y listas
 
-Esta lección continúa el documento que preparaste en [Texto, etiquetas y atributos](../02-texto-y-atributos/README.md). Ya puedes organizar títulos, párrafos y dar formato semántico al contenido; ahora aprenderás a conectar páginas mediante enlaces y a estructurar conjuntos de datos con listas.
+Esta lección continúa el trabajo tras dominar [Texto, etiquetas y atributos](../02-texto-y-atributos/README.md). Ya sabes cómo dar formato semántico al contenido escrito; ahora aprenderás a conectar documentos mediante hipervínculos y a estructurar conjuntos de datos mediante listas ordenadas, no ordenadas y de descripción.
 
-> [!TIP]
-> Continúa trabajando sobre el archivo `index.html` de las lecciones anteriores o crea una carpeta para esta lección. Guarda los cambios con frecuencia y recarga el navegador para comprobar los destinos de tus enlaces.
+---
 
 ## 1. Enlaces con la etiqueta `a`
 
-La etiqueta `a` (*anchor* o ancla) convierte texto o elementos en enlaces que llevan a otros destinos. Utiliza el atributo `href` (*hypertext reference*) para definir la dirección de llegada.
+La etiqueta `<a>` (*anchor* o ancla) es el núcleo de la web: convierte texto o elementos visuales en enlaces interactivos que conducen a otros destinos mediante su atributo fundamental `href` (*hypertext reference*).
 
-| Tipo de enlace | ¿A dónde apunta? | Ejemplo de `href` |
+| Tipo de enlace | ¿A dónde conduce? | Sintaxis de ejemplo |
 | --- | --- | --- |
-| **Absoluto / Externo** | A un sitio web completo en internet. | `href="https://developer.mozilla.org"` |
+| **Absoluto / Externo** | A un sitio web completo en cualquier servidor de internet. | `href="https://developer.mozilla.org"` |
 | **Relativo / Interno** | A otro archivo dentro de tu propio proyecto. | `href="contacto.html"` o `href="paginas/acerca.html"` |
-| **Ancla interna** | A una sección específica de la misma página. | `href="#contacto"` |
-| **Funcional** | A una acción del sistema (correo, teléfono). | `href="mailto:correo@ejemplo.com"` |
+| **Ancla interna** | A una sección específica dentro de la misma página. | `href="#proyectos"` |
+| **Acción funcional** | Abre aplicaciones del sistema (correo o teléfono). | `href="mailto:hola@ejemplo.com"` o `href="tel:+525512345678"` |
+| **Descarga directa** | Fuerza la descarga de un archivo al disco duro. | `href="documento.pdf" download` |
 
-### Ejemplo de enlaces básicos
-
-Agrega estos enlaces dentro de `body`:
+### Código de ejemplo: Enlaces básicos y funcionales
 
 ```html
-<!-- Enlace externo -->
-<p>Consulta la <a href="https://developer.mozilla.org/es/">documentación de MDN</a> para aprender más.</p>
+<!-- Enlace externo absoluto -->
+<p>Consulta la <a href="https://developer.mozilla.org/es/">documentación oficial de MDN</a> para aprender más.</p>
 
-<!-- Enlace relativo a otra página del proyecto -->
+<!-- Enlace relativo a otra página local -->
 <p>Conoce más sobre mi trabajo en la página de <a href="contacto.html">contacto</a>.</p>
 
-<!-- Enlace funcional -->
-<p>Escríbeme a mi <a href="mailto:hola@ejemplo.com">correo electrónico</a>.</p>
+<!-- Enlaces funcionales del sistema operativo -->
+<p>
+  Escríbeme a mi <a href="mailto:contacto@ejemplo.com">correo electrónico</a> o 
+  llámame a mi <a href="tel:+525512345678">teléfono de oficina</a>.
+</p>
+
+<!-- Enlace de descarga asistida -->
+<p>Descarga mi <a href="cv-profesional.pdf" download>Currículum en formato PDF</a>.</p>
 ```
 
 ### Qué observar en los enlaces
 
-- El texto entre `<a>` y `</a>` es el enlace visible y clickeable.
-- El texto debe ser descriptivo por sí solo; evita frases vacías como "haz clic aquí" o "más info".
-- Los enlaces externos deben incluir el protocolo completo (`https://`).
+- **El peligro de "Haz clic aquí" (La Lista de Enlaces en Lectores de Pantalla):**  
+  Las personas ciegas utilizan atajos de teclado (como el *Rotor* en VoiceOver o `Insert + F7` en NVDA) para extraer una lista con **todos los enlaces de la página en una sola columna**. Si tu texto dice diez veces *"haz clic aquí"* o *"leer más"*, la persona solo escuchará una lista inútil de frases idénticas sin saber a dónde conducen.
+- **Vista previa de URL:** Al pasar el cursor sobre cualquier enlace en tu navegador, observa la esquina inferior izquierda de la pantalla: el navegador siempre muestra la dirección de destino antes de hacer clic.
 
 > [!IMPORTANT]
-> El texto del enlace debe explicar claramente a dónde conduce antes de pulsar en él. Esto es indispensable para la accesibilidad y para personas que navegan con lectores de pantalla.
+> El texto entre `<a>` y `</a>` debe ser **autoexplicativo y descriptivo por sí solo** (ejemplo: `<a href="precios.html">Consultar tabla de precios</a>` en lugar de `Para ver precios <a href="precios.html">haz clic aquí</a>`).
 
-### Práctica de enlaces básicos
+### Práctica 1: Enlaces básicos y funcionales (en `index.html`)
 
-Agrega a tu página:
-
-- Un enlace a una fuente de documentación oficial.
-- Un enlace relativo a un archivo ficticio llamado `sobre-mi.html`.
-- Un enlace de correo con `mailto:`.
+1. Crea tu archivo `index.html` con la estructura base de HTML5.
+2. Agrega dentro de `<body>` un párrafo con un enlace externo a la documentación de HTML en MDN.
+3. Añade un enlace funcional de correo con `mailto:` y un enlace de teléfono con `tel:`.
+4. Pasa el cursor sobre ellos y comprueba en la esquina del navegador cómo se preparan las URLs.
 
 ---
 
 ## 2. Enlaces con atributos: nuevas pestañas y anclas internas
 
-Los enlaces pueden cambiar su comportamiento o navegar dentro del mismo documento utilizando atributos adicionales.
+Los enlaces pueden abrir destinos en pestañas secundarias o desplazarse verticalmente dentro del mismo documento.
 
 ```html
-<!-- Abrir en una pestaña nueva -->
+<!-- Abrir en una pestaña nueva de forma segura -->
 <p>
-  Visita el sitio de 
+  Visita el sitio oficial del consorcio
   <a href="https://w3.org" target="_blank" rel="noopener noreferrer">W3C</a>.
 </p>
 
 <!-- Enlace que salta a una sección inferior -->
-<p><a href="#proyectos">Ir directo a mis proyectos</a></p>
+<p><a href="#proyectos">Ir directo a mis proyectos recientes</a></p>
 
-<!-- Sección de destino -->
+<!-- Sección de destino (debe tener el id idéntico) -->
 <section id="proyectos">
-  <h2>Mis proyectos</h2>
-  <p>Aquí se listan los trabajos recientes.</p>
-  <p><a href="#inicio">Volver al inicio</a></p>
+  <h2>Mis proyectos destacados</h2>
+  <p>Aquí se listan los trabajos desarrollados durante el curso.</p>
+  <!-- Enlace que regresa al encabezado de la página -->
+  <p><a href="#inicio">Volver al inicio de la página</a></p>
 </section>
 ```
 
-- `target="_blank"` abre la página en una pestaña o ventana nueva.
-- `rel="noopener noreferrer"` protege la seguridad y el rendimiento al abrir sitios externos en pestañas nuevas.
-- `href="#id"` busca un elemento que tenga el atributo `id` exactamente con ese mismo nombre.
-
 ### Qué observar en anclas y pestañas
 
-- Para que un ancla interna funcione, debe existir un elemento con el `id` correspondiente (sin el símbolo `#` en el `id`, solo en el `href`).
-- Si haces clic en `#proyectos`, el navegador se desplazará verticalmente hasta esa sección.
+- **El símbolo `#` solo va en el `href`:** El enlace busca `href="#proyectos"`, pero la etiqueta de destino se define limpiamente como `id="proyectos"` (sin el numeral `#`).
+- **Seguridad con `rel="noopener noreferrer"`:** Al abrir una pestaña nueva con `target="_blank"`, el sitio externo podría acceder al objeto `window.opener` de tu página. Incluir `rel="noopener noreferrer"` corta esa conexión protegiendo la seguridad y el rendimiento de tu web.
+- **Cambio en la URL:** Al hacer clic en un ancla interna, la barra de direcciones del navegador añade el fragmento (ej. `index.html#proyectos`), permitiendo que el usuario copie y comparta ese enlace directo a esa sección específica.
 
 > [!WARNING]
-> Comprueba cada destino. Un enlace que apunta a un archivo inexistente dará un error 404, y un ancla con un `id` mal escrito no moverá la pantalla.
+> Comprueba siempre tus destinos. Un enlace que apunta a un archivo inexistente provocará un error 404, y un ancla con un `id` mal escrito no moverá la pantalla en absoluto.
 
-### Práctica de anclas
+### Práctica 2: Saltos de página internos con anclas (en `index.html`)
 
-Asigna un `id="inicio"` a tu encabezado `h1` y crea un enlace al final de tu documento que regrese al inicio de la página.
+1. Asigna el atributo `id="inicio"` a tu encabezado principal `<h1>`.
+2. Añade varios párrafos de texto de relleno para que la página tenga barra de desplazamiento vertical (*scroll*).
+3. Crea al final del documento una `<section id="contacto">` con un enlace que diga `<a href="#inicio">Volver arriba</a>`. Haz clic y comprueba cómo la pantalla salta automáticamente al inicio.
 
 ---
 
 ## 3. Listas no ordenadas con `ul`
 
-Usa la etiqueta `ul` (*unordered list*) cuando el orden de los elementos no altera el significado del contenido. Cada elemento dentro de la lista se encierra en una etiqueta `li` (*list item*).
+Usa la etiqueta `<ul>` (*unordered list*) cuando el orden cronológico o secuencial de los elementos no altera el significado del contenido. Cada elemento dentro de la lista se encierra obligatoriamente en una etiqueta `<li>` (*list item*).
 
 ```html
-<h2>Habilidades técnicas</h2>
+<h2>Herramientas de Desarrollo</h2>
 <ul>
-  <li>Estructura semántica con HTML5</li>
-  <li>Organización de archivos</li>
+  <li>Editor de código Visual Studio Code</li>
+  <li>Navegador web con DevTools</li>
   <li>Control de versiones con Git</li>
+  <li>Servidor local de desarrollo</li>
 </ul>
 ```
 
 ### Qué observar en `ul`
 
-- `ul` representa el contenedor de la lista completa.
-- Solo las etiquetas `li` deben ser hijas directas de `ul`.
-- Por defecto, el navegador muestra puntos o viñetas a la izquierda de cada elemento.
+- **Hijos directos estrictos:** La etiqueta `<ul>` **solo puede tener elementos `<li>` como hijos directos**. Nunca coloques párrafos `<p>`, encabezados `<h3>` o enlaces `<a>` sueltos directamente dentro de `<ul>` sin envolverlos en un `<li>`.
+- **Anuncios para accesibilidad:** Los lectores de pantalla informan al usuario al entrar a una lista diciendo: *"Lista con 4 elementos"*, lo que ayuda a dimensionar la cantidad de información disponible.
 
 > [!NOTE]
-> No uses guiones o asteriscos manuales dentro de párrafos para simular listas. La etiqueta `ul` le comunica a los motores de búsqueda y lectores de pantalla cuántos elementos componen el grupo.
+> No utilices guiones (`-`), asteriscos (`*`) ni viñetas manuales dentro de párrafos para simular listas. La etiqueta semántica `<ul>` le comunica formalmente a los buscadores y tecnologías de asistencia la existencia de una colección estructurada.
 
-### Práctica de listas sin orden
+### Práctica 3: Tu lista de herramientas técnicas (en `index.html`)
 
-Crea una lista `ul` con cuatro herramientas o tecnologías que te gustaría dominar este año.
+Agrega a tu `index.html` una lista no ordenada `<ul>` con al menos cuatro tecnologías o lenguajes que te gustaría aprender este año.
 
 ---
 
 ## 4. Listas ordenadas con `ol`
 
-Usa la etiqueta `ol` (*ordered list*) cuando los elementos representan pasos, secuencias, clasificaciones o prioridades donde el orden sí importa.
+Usa la etiqueta `<ol>` (*ordered list*) cuando los elementos representan pasos secuenciales, clasificaciones, recetas o prioridades donde **el orden numérico sí altera el significado**:
 
 ```html
 <h2>Pasos para publicar una página web</h2>
 <ol>
-  <li>Planear la estructura y el contenido.</li>
-  <li>Escribir el código HTML semántico.</li>
-  <li>Comprobar los enlaces y la accesibilidad.</li>
-  <li>Subir los archivos a un servidor.</li>
+  <li>Planear la arquitectura y redactar el contenido.</li>
+  <li>Escribir el código HTML semántico y accesible.</li>
+  <li>Validar el código en el validador oficial del W3C.</li>
+  <li>Subir los archivos al servidor de producción.</li>
 </ol>
 ```
 
-Atributos útiles en `ol`:
+### Atributos avanzados de `ol`
 
-- `start="5"`: Inicia la numeración en un número diferente a 1.
-- `reversed`: Invierte el orden numérico (útil para cuentas regresivas o tops de mejores elementos).
+- **`start="N"`:** Inicia la numeración en un número diferente a 1.
+- **`reversed`:** Invierte el orden numérico (ideal para cuentas regresivas o rankings de mejores elementos).
 
 ```html
-<h2>Cuenta regresiva</h2>
+<!-- Cuenta regresiva de lanzamiento -->
+<h2>Cuenta regresiva para el evento</h2>
 <ol reversed>
-  <li>Lanzamiento</li>
-  <li>Revisión final</li>
-  <li>Preparación</li>
+  <li>Despegue y transmisión en vivo</li>
+  <li>Comprobación final de sistemas</li>
+  <li>Inicio de la cuenta atrás</li>
 </ol>
 ```
 
 ### Qué observar en `ol`
 
-- El navegador numera automáticamente cada `li`. No debes escribir los números a mano dentro del texto.
-- Si eliminas o agregas un elemento intermedio, el navegador recalcula la numeración de forma automática.
+- **Numeración automática:** El navegador calcula y renderiza los números por su cuenta. **Nunca escribas los números a mano dentro del texto** (ejemplo incorrecto: `<li>1. Paso uno</li>`), ya que el navegador terminaría mostrando `1. 1. Paso uno`.
+- **La prueba de intercambio:** Si cambias de lugar dos elementos de la lista y el resultado se arruina (como los pasos de una receta de cocina), debes usar `<ol>`. Si el orden no afecta la comprensión (como una lista de compras), usa `<ul>`.
 
 > [!TIP]
-> Regla sencilla: si cambias el orden de los elementos y el significado se arruina (como una receta de cocina), usa `ol`. Si el orden no afecta la comprensión (como una lista de compras), usa `ul`.
+> Si agregas o eliminas un `<li>` intermedio dentro de un `<ol>`, el navegador recalcula la numeración de toda la lista automáticamente sin que tengas que editar nada.
 
-### Práctica de listas ordenadas
+### Práctica 4: Pasos secuenciales y cuentas regresivas (en `index.html`)
 
-Escribe una lista ordenada con los pasos que sigues para encender tu computadora y preparar tu espacio de estudio.
+1. Crea una lista ordenada `<ol>` con los 3 pasos principales que sigues para preparar tu espacio de estudio.
+2. Debajo, crea otra lista `<ol reversed>` que represente un Top 3 de tus videojuegos, libros o películas favoritas, ordenadas del puesto 3 al puesto 1.
 
 ---
 
 ## 5. Listas de descripción: `dl`, `dt` y `dd`
 
-HTML cuenta con un tercer tipo de lista para pares de términos y definiciones, preguntas frecuentes o metadatos:
+HTML ofrece un tercer tipo de lista pensado para estructurar pares de términos y definiciones, glosarios, preguntas frecuentes (FAQ) o metadatos de productos:
 
 ```html
-<h2>Glosario web</h2>
+<h2>Glosario de Arquitectura Web</h2>
 <dl>
+  <!-- Término a definir -->
   <dt>HTML</dt>
-  <dd>Lenguaje de marcado utilizado para estructurar el contenido de la web.</dd>
+  <!-- Definición o detalle asociado -->
+  <dd>Lenguaje de marcado utilizado para estructurar semánticamente el contenido de la web.</dd>
 
-  <dt>Navegador</dt>
-  <dd>Programa que interpreta el código web y lo muestra en pantalla.</dd>
+  <dt>DNS</dt>
+  <dd>Sistema que traduce nombres de dominio legibles en direcciones IP numéricas.</dd>
 </dl>
 ```
 
-- `dl` (*description list*) es el contenedor general.
-- `dt` (*description term*) es el término o concepto.
-- `dd` (*description details*) es la definición o explicación asociada al término.
+- `<dl>` (*description list*): Contenedor general de la lista.
+- `<dt>` (*description term*): El término, concepto o pregunta.
+- `<dd>` (*description details*): La explicación, respuesta o valor asociado.
 
 ### Qué observar en `dl`
 
-- Un término (`dt`) puede tener múltiples descripciones (`dd`) asociadas.
-- Es la estructura semántica correcta para diccionarios, glosarios o listas de preguntas y respuestas (FAQ).
+- Un mismo término (`<dt>`) puede tener múltiples descripciones (`<dd>`), y múltiples términos pueden compartir una sola descripción.
+- Por defecto, los navegadores muestran las etiquetas `<dd>` con una sangría visual hacia la derecha para indicar subordinación al `<dt>`.
 
-### Reto de términos
+### Práctica 5: Glosario de términos web (en `index.html`)
 
-Crea un glosario con al menos tres conceptos que hayas aprendido hasta ahora (por ejemplo: etiqueta, atributo y elemento).
+Crea dentro de tu archivo `index.html` una lista de descripción `<dl>` con al menos tres conceptos fundamentales aprendidos hasta el momento (por ejemplo: *Etiqueta*, *Atributo* y *Elemento*).
 
 ---
 
 ## 6. Listas anidadas y menús de navegación
 
-Una lista puede contener otra lista en su interior. Esto es fundamental para crear esquemas detallados o menús de navegación (`nav`).
+Una lista puede contener otra lista en su interior. Esta técnica es la base estándar para maquetar esquemas detallados, tablas de contenido y menús de navegación con subsecciones (`<nav>`):
+
+### La regla de oro de la anidación (❌ vs. ✅)
+
+El error sintáctico más común entre principiantes es colocar una sublista directamente dentro del contenedor `<ul>` padre sin envolverla en un `<li>`:
 
 ```html
-<nav>
-  <h2>Menú de navegación</h2>
+<!-- ❌ INCORRECTO: 'ul' no puede ser hijo directo de otro 'ul' -->
+<ul>
+  <li>Temas de estudio</li>
+  <ul> <!-- ¡ERROR! Debe estar dentro de un li -->
+    <li>Enlaces</li>
+  </ul>
+</ul>
+
+<!-- ✅ CORRECTO: La sublista vive DENTRO del <li> padre antes de que se cierre -->
+<ul>
+  <li>
+    Temas de estudio
+    <ul>
+      <li>Enlaces</li>
+      <li>Listas</li>
+    </ul>
+  </li> <!-- El li padre se cierra después de la sublista -->
+</ul>
+```
+
+### Código de ejemplo: Menú de navegación semántico anidado
+
+```html
+<nav aria-label="Menú principal del sitio">
+  <h2>Mapa de navegación</h2>
   <ul>
     <li><a href="#inicio">Inicio</a></li>
     <li>
-      <a href="#temas">Temas de estudio</a>
+      <a href="#cursos">Nuestros Cursos</a>
+      <!-- Sublista anidada dentro del li de cursos -->
       <ul>
-        <li><a href="#enlaces">Enlaces</a></li>
-        <li><a href="#listas">Listas</a></li>
+        <li><a href="#html">HTML5 Semántico</a></li>
+        <li><a href="#css">CSS Moderno</a></li>
       </ul>
     </li>
     <li><a href="#contacto">Contacto</a></li>
@@ -213,38 +248,60 @@ Una lista puede contener otra lista en su interior. Esto es fundamental para cre
 
 ### Qué observar en listas anidadas
 
-- La sublista `ul` o `ol` debe colocarse **dentro** de un `li` padre, justo antes de que este se cierre.
-- Los enlaces (`a`) se colocan comúnmente dentro del `li` para construir barras y menús de navegación web.
+- La sublista secundaria debe colocarse **después del texto del elemento padre, pero antes de su etiqueta de cierre `</li>`**.
+- Los lectores de pantalla informan al usuario del cambio de nivel diciendo: *"Nivel de lista 2"*, lo que permite a las personas con discapacidad visual comprender la jerarquía de categorías y subcategorías.
 
 > [!CAUTION]
-> No coloques una lista secundaria directamente dentro de un `ul` padre sin envolverla en un `li`. Toda etiqueta hija directa de `ul` u `ol` debe ser un `li`.
+> Toda etiqueta hija directa de un `<ul>` o de un `<ol>` debe ser **exclusivamente un `<li>`**. Cualquier otra etiqueta suelta colocada allí romperá la validación sintáctica del W3C.
 
-### Práctica de navegación
+### Práctica 6: Menú de navegación anidado (en `index.html`)
 
-Crea un menú de navegación para tu página utilizando la etiqueta semántica `<nav>` que contenga una lista `ul` con tres enlaces a diferentes secciones de tu documento.
+Construye en tu `index.html` una barra de navegación `<nav>` con una lista `<ul>` que contenga tres secciones principales, y añade una sublista con dos temas anidados dentro del segundo elemento `<li>`.
 
 ---
 
-## Reto final de la lección
+## Reto final de la lección: Guía de Viaje para una Ciudad
 
-Crea una **Guía de Viaje para una Ciudad** en tu página web que incluya todos los conceptos vistos en esta lección:
+Ahora que dominas los enlaces relativos, absolutos, funcionales y todos los tipos de listas en tu laboratorio (`index.html`), demostrarás tu autonomía construyendo un documento completo desde cero.
 
-- [ ] Un encabezado principal `h1` con el `id="inicio"`.
-- [ ] Una barra de navegación `<nav>` con una lista de enlaces que salten a las diferentes secciones (`#lugares`, `#itinerario`, `#glosario`).
-- [ ] Una sección (`#lugares`) con una **lista no ordenada** de al menos 4 sitios recomendados.
-- [ ] Una sección (`#itinerario`) con una **lista ordenada** que describa el paso a paso para recorrer la ciudad en un día.
-- [ ] Una sección (`#glosario`) con una **lista de descripción** (`dl`) que explique 2 palabras o modismos típicos de ese lugar.
-- [ ] Al menos un enlace externo con `target="_blank"` y `rel="noopener noreferrer"` hacia la página oficial de turismo.
-- [ ] Un enlace al final de la página que te devuelva a `#inicio`.
+Crea un archivo nuevo llamado **`reto.html`** dentro de tu carpeta `03-enlaces-y-listas`. Construirás una **Guía Turística de una Ciudad** que cumpla estrictamente con la siguiente lista de control:
 
-Comprueba en tu navegador que cada enlace cumpla su función y que todas las listas mantengan su estructura limpia y semántica.
+- [ ] Estructura base completa de HTML5 (`<!DOCTYPE html>`, `<html lang="es">`, `<head>` con metadatos y `<body>`).
+- [ ] Un encabezado principal `<h1>` con el nombre de la ciudad y el atributo `id="inicio"`.
+- [ ] Una barra de navegación semántica `<nav aria-label="Navegación de la guía">` que contenga una lista `<ul>` con enlaces internos que salten a las diferentes secciones (`#lugares`, `#itinerario`, `#glosario`).
+- [ ] **Sección de Lugares de Interés (`#lugares`):**
+  - Una **lista no ordenada** (`<ul>`) con al menos 4 sitios turísticos recomendados.
+  - Al menos uno de los elementos debe contener una sublista anidada con recomendaciones específicas.
+- [ ] **Sección de Itinerario (`#itinerario`):**
+  - Una **lista ordenada** (`<ol>`) que describa la secuencia paso a paso para recorrer la ciudad en un día (mañana, tarde y noche).
+- [ ] **Sección de Modismos Locales (`#glosario`):**
+  - Una **lista de descripción** (`<dl>`) con al menos 3 palabras o expresiones típicas de esa ciudad con su respectiva definición (`<dt>` y `<dd>`).
+- [ ] **Enlaces externos y funcionales:**
+  - Al menos un enlace externo que abra en pestaña nueva con `target="_blank"` y `rel="noopener noreferrer"` apuntando a la web oficial de turismo de esa ciudad.
+  - Un enlace funcional de contacto (`mailto:` o `tel:`) para pedir informes turísticos.
+- [ ] **Navegación de retorno:**
+  - Un enlace al pie del documento que apunte a `#inicio` para regresar al inicio de la página.
+
+---
+
+### Preguntas de autoevaluación
+
+Intenta responder las preguntas mentalmente y luego despliega la sección para comprobar tus respuestas:
+
+1. ¿Por qué es una pésima práctica de accesibilidad utilizar textos como "haz clic aquí" o "más información" en un enlace `<a>`?
+2. ¿Cuál es la regla semántica definitiva para decidir si una colección de elementos debe estructurarse con `<ul>` o con `<ol>`?
+3. Si colocas `target="_blank"` en un enlace que lleva a un sitio web externo, ¿por qué es indispensable incluir el atributo `rel="noopener noreferrer"`?
+4. ¿Cuál es el error sintáctico al crear listas anidadas y cómo se corrige según los estándares del W3C?
+5. ¿En qué se diferencia una lista de descripción (`<dl>`) de una lista tradicional (`<ul>` u `<ol>`) y para qué casos de uso fue concebida?
 
 ---
 
 ## 📚 Recursos y documentación oficial
 
-Para profundizar en la creación de hipervínculos y listas, consulta la documentación oficial de **MDN Web Docs**:
+Para profundizar en la creación de hipervínculos y listas semánticas, consulta la documentación oficial de **MDN Web Docs**:
 
 - 📖 [Creación de hiperenlaces en HTML - MDN](https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/Creating_hyperlinks)
 - 📖 [Listas en HTML (`<ul>`, `<ol>`, `<dl>`) - MDN](https://developer.mozilla.org/es/docs/Learn_web_development/Core/Structuring_content/HTML_text_fundamentals#listas)
-- 📖 [Referencia del elemento de navegación `<nav>` - MDN](https://developer.mozilla.org/es/docs/Web/HTML/Element/nav)
+- 📖 [Referencia del elemento de anclaje `<a>` - MDN](https://developer.mozilla.org/es/docs/Web/HTML/Element/a)
+- 📖 [El elemento de descripción `<dl>` - MDN](https://developer.mozilla.org/es/docs/Web/HTML/Element/dl)
+- 📖 [Accesibilidad en enlaces: textos significativos - W3C WAI](https://www.w3.org/WAI/WCAG21/Understanding/link-purpose-in-context.html)
