@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="es-mx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -10,7 +10,7 @@
         <h1>
             <strong>café Karen</strong>
         </h1>
-          <nav>
+            <nav aria-label="Navegación principal">
                 <ul>
                     <li><a href="#nosotros">Nosotros</a></li>
                     <li><a href="#menu">Menu</a></li>
@@ -20,6 +20,7 @@
             </nav>
     </header>
     <main>
+        <div class="contenido-con-sidebar">
 
         <section id="nosotros">
             <h2>Acerca de Nuestros</h2>
@@ -81,8 +82,16 @@
                     Sit quisquam nemo vel cum quos inventore. Dignissimos, est veniam?
                     Officiis!
                 </p>
-                <p>Precio <span>$23</span> pesos la <strong>pieza</strong></p>
+                <p>Precio <span>$23</span> pesos la <strong>pieza</strong>. Preparación estimada: <time datetime="PT15M">15 minutos</time>.</p>
             </article>
+                <article>
+                    <header>
+                        <h3>Guía rápida de Flexbox</h3>
+                        <p><small>Publicado el <time datetime="2026-09-10">10 de septiembre de 2026</time></small></p>
+                    </header>
+                    <p>Flexbox permite distribuir elementos de una interfaz de forma clara y adaptable.</p>
+                    <p><a href="#contacto">Leer más sobre Flexbox</a></p>
+                </article>
             <article>
                 <h3>Memelitas</h3>
                 <p>
@@ -107,8 +116,13 @@
 
         <aside>
             <h2>Nuestro Chef</h2>
-            <p>Nuestro chef <q cite="https://es.wikipedia.org/wiki/Memela">La memelas son vida</q>.</p>
+            <p>Nuestro chef comparte esta filosofía: <q cite="https://es.wikipedia.org/wiki/Memela">las memelas son vida</q>.</p>
+            <ul>
+                <li><a href="https://github.com/hugofriasmtz">Perfil de GitHub</a></li>
+                <li><a href="mailto:hugofriasmtz@hotmail.com">Contactar al chef</a></li>
+            </ul>
         </aside>
+        </div>
     </main>
     <hr>
 
@@ -120,6 +134,7 @@
             <li><a href="https://www.linkedin.com/in/hugofriasmtz/">linkedin</a></li>
         </ul>
         <span><a href="#inicio">Inicio</a></span>
+            <p id="contacto"><a href="mailto:hugofriasmtz@hotmail.com">Contactar al autor</a></p>
         <p>&copy; 2026 Café Karen. Todos los derechos reservados.</p>
     </footer>
 </body>
