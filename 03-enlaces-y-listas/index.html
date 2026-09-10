@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="es">
+<html lang="es-mx">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,8 +7,15 @@
 </head>
 <body>
 
-    <h1 id="inicio">Enlaces y Listas</h1>
-    <p>hoy 28 de Agosto del <span>2026 </span>continuo con mi leccion de HTML</p>
+    <h1 id="inicio">Enlaces y listas</h1>
+    <nav aria-label="Navegación principal">
+        <ul>
+            <li><a href="#trabajos">Enlaces</a></li>
+            <li><a href="#proyectos">Proyectos</a></li>
+            <li><a href="#contacto">Contacto</a></li>
+        </ul>
+    </nav>
+    <p>Hoy continúo con mi lección de HTML.</p>
     <hr>
 
     <!-- Enlaces Basicos -->
@@ -17,23 +24,24 @@
         <!-- Enlaces externo  -->
             <h3 id="trabajos">Enlace externo</h3>
             <p>Aprendere a enlasar a otra pagina</p>
-            <P>Puedes encontrar mi <strong><a href="https://github.com/hugofriasmtz">Github</a></strong></P>
+            <p>Puedes encontrar mi <strong><a href="https://github.com/hugofriasmtz">perfil de GitHub</a></strong>.</p>
         <!-- Fin de enlace externo -->
         <hr>
 
         <!-- Enlace relativo -->
             <h3>Enlace relativo</h3>
-            <p>Conoce mas sobre mis <strong><a href="trabajos.html">Trabajos</a></strong></p>
+            <p>Conoce más sobre mi <strong><a href="reto.html">guía turística</a></strong>.</p>
         <!-- Fin de enlace relativo -->
         <hr>
 
         <!-- Enlace funcionale -->
             <h3>Enlace Funcional</h3>
             <p>¿Quieres colaborar? <br>
-                mandame un 
+                Mándame un 
                 <strong>
-                    <a href="mailto:hugofriasmtz@hotmail.com">correo</a>
+                    <a href="mailto:hugofriasmtz@hotmail.com">correo electrónico</a>
                 </strong>
+                o llámame al <a href="tel:+522321234567">teléfono de informes</a>.
             </p>
         
         <!-- Fin de enlace funcional -->
@@ -45,13 +53,13 @@
         <!-- Enlaces externo con atributo -->
             <h3 >Enlace externo</h3>
             <p>Aprendere a enlasar a otra pagina</p>
-            <P>Puedes encontrar mi <strong><a href="https://github.com/hugofriasmtz/my-portfolio" target="_blank">Github</a></strong></P>
+            <p>Puedes visitar mi <strong><a href="https://github.com/hugofriasmtz/my-portfolio" target="_blank" rel="noopener noreferrer">portafolio en GitHub</a></strong>.</p>
         <!-- Fin de enlace externo con atributo -->
         <hr>
 
         <!-- Enlace relativo con atributo -->
             <h3>Enlace relativo</h3>
-            <p>Conoce mas sobre mis <strong><a href="#trabajos">Trabajos</a></strong></p>
+            <p>Salta a la sección de <strong><a href="#proyectos">proyectos recientes</a></strong>.</p>
         <!-- Fin de enlace relativo con atributo -->
         <hr>  
         
@@ -59,9 +67,16 @@
             <section id="proyectos">
             <h2>Mis proyectos</h2>
             <p>Aquí se listan los trabajos recientes.</p>
+            <p>También puedes <a href="mailto:hugofriasmtz@hotmail.com">solicitar información por correo</a>.</p>
             <p><a href="#inicio">Volver al inicio</a></p>
             </section>
         <!-- Fin sección de destino -->
+
+        <section id="contacto">
+            <h2>Contacto</h2>
+            <p>Solicita información por <a href="mailto:hugofriasmtz@hotmail.com">correo electrónico</a>.</p>
+            <p><a href="#inicio">Volver al inicio</a></p>
+        </section>
 
     <!-- Fin de Enlaces con Atributos -->
 </body>
