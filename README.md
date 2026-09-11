@@ -118,6 +118,12 @@ guia-html/
 
 ---
 
+## Desarrollado por
+
+[Hugo Frias](https://hugofriasmtz.github.io/my-portfolio/)
+
+Gracias por tu interés en esta ruta de aprendizaje. Si encuentras errores, tienes sugerencias o quieres contribuir, no dudes en abrir un *issue* o enviar un *pull request*.
+
 ## 📄 Licencia
 
 Este proyecto está bajo la licencia [MIT](LICENSE) © 2026 Hugo Frias. Eres libre de usarlo, compartirlo y adaptarlo para tu propio aprendizaje y enseñanza.
